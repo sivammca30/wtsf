@@ -1,0 +1,53 @@
+{
+  "state": [
+    {
+      "id": 1,
+      "cid": 1,
+      "name": "Tamil Nadu",
+	  "order": 1,
+	  "status": "A"
+    },
+    {
+      "id": 2,
+      "cid": 1,
+      "name": "Andhra Pradesh",
+	  "order": 2,
+	  "status": "A"
+    },
+    {
+      "id": 3,
+      "cid": 1,
+      "name": "Gujarat",
+	  "order": 3,
+	  "status": "A"
+    },
+    {
+      "id": 4,
+      "cid": 1,
+      "name": "Uttar Pradesh",
+	  "order": 4,
+	  "status": "A"
+    },
+    {
+      "id": 5,
+      "cid": 1,
+      "name": "Karnataka",
+	  "order": 5,
+	  "status": "A"
+    },
+    {
+      "id": 6,
+      "cid": 1,
+      "name": "Odisha",
+	  "order": 6,
+	  "status": "A"
+    },
+    {
+      "id": 7,
+      "cid": 1,
+      "name": "Maharashtra",
+	  "order": 7,
+	  "status": "A"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "district": [
+    {
+      "id": 1,
+      "cid": 1,
+      "sid": 1,
+      "name": "Chennai",
+	  "order": 1,
+	  "status": "A"
+    },
+    {
+      "id": 2,
+      "cid": 1,
+      "sid": 1,
+      "name": "Madurai",
+	  "order": 2,
+	  "status": "A"
+    },
+    {
+      "id": 3,
+      "cid": 1,
+      "sid": 1,
+      "name": "Tenkasi",
+	  "order": 3,
+	  "status": "A"
+    },
+    {
+      "id": 4,
+      "cid": 1,
+      "sid": 1,
+      "name": "Tiruvallur",
+	  "order": 4,
+	  "status": "A"
+    },
+    {
+      "id": 5,
+      "cid": 1,
+      "sid": 1,
+      "name": "Virudhunagar",
+	  "order": 5,
+	  "status": "A"
+    },
+    {
+      "id": 6,
+      "cid": 1,
+      "sid": 1,
+      "name": "Ranipet",
+	  "order": 6,
+	  "status": "A"
+    },
+    {
+      "id": 7,
+      "cid": 1,
+      "sid": 1,
+      "name": "Tiruvannamalai",
+	  "order": 7,
+	  "status": "A"
+    },
+    {
+      "id": 8,
+      "cid": 1,
+      "sid": 1,
+      "name": "Salem",
+	  "order": 8,
+	  "status": "I"
+    }
+  ]
+}
