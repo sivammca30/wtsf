@@ -1,4 +1,53 @@
-@import url('../../assets/css/font.css');
+/* ── Local Fonts ─────────────────────────────────────────────────────────── */
+@font-face {
+  font-family: 'Cinzel';
+  src: url('../assets/fonts/Cinzel/Cinzel-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Cinzel';
+  src: url('../assets/fonts/Cinzel/Cinzel-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Cinzel';
+  src: url('../assets/fonts/Cinzel/Cinzel-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/Inter/Inter_18pt-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/Inter/Inter_18pt-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/Inter/Inter_18pt-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/Inter/Inter_18pt-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* ── Dark Theme (default) ─────────────────────────────────────────────────── */
 :root,
@@ -47,6 +96,39 @@ body {
   background: var(--bg);
   color: var(--text-primary);
   font-family: 'Inter', sans-serif;
+  transition: background var(--transition), color var(--transition);
+}
+
+/* ── Theme Toggle Button ──────────────────────────────────────────────────── */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: border-color var(--transition), color var(--transition), background var(--transition);
+  white-space: nowrap;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.theme-toggle .toggle-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.theme-toggle .toggle-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
 }
 
 /* ── Header ───────────────────────────────────────────────────────────────── */
@@ -54,19 +136,21 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(13, 13, 15, 0.92);
+  background: var(--hdr-bg);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
+  transition: background var(--transition), border-color var(--transition);
 }
 
 .hdr-inner {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
-  height: 100px;
+  height: 64px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .hdr-logo {
@@ -74,6 +158,7 @@ body {
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .hdr-logo img {
@@ -91,6 +176,12 @@ body {
   max-width: 160px;
 }
 
+.hdr-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
 /* Desktop nav — visible on large screens, hidden on mobile */
 nav.desktop-nav {
   display: flex;
@@ -104,10 +195,27 @@ nav.desktop-nav a {
   font-weight: 500;
   transition: color var(--transition);
   letter-spacing: 0.02em;
+  position: relative;
+  padding-bottom: 4px;
 }
 
 nav.desktop-nav a:hover {
   color: var(--accent);
+}
+
+nav.desktop-nav a.active {
+  color: var(--accent);
+}
+
+nav.desktop-nav a.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
 }
 
 /* Hamburger button — hidden on large screens, visible on mobile */
@@ -121,9 +229,15 @@ nav.desktop-nav a:hover {
   font-size: 1.1rem;
   cursor: pointer;
   line-height: 1;
+  transition: border-color var(--transition), color var(--transition);
 }
 
-/* Mobile drawer — hidden by default, shown when .open is applied */
+.nav-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Mobile drawer */
 .mobile-nav {
   display: none;
   flex-direction: column;
@@ -131,6 +245,7 @@ nav.desktop-nav a:hover {
   border-bottom: 1px solid var(--border);
   padding: 1rem 1.5rem;
   gap: 0.75rem;
+  transition: background var(--transition);
 }
 
 .mobile-nav.open {
@@ -143,6 +258,15 @@ nav.desktop-nav a:hover {
   font-size: 0.95rem;
   padding: 0.35rem 0;
   border-bottom: 1px solid var(--border);
+  transition: color var(--transition);
+}
+
+.mobile-nav a:hover {
+  color: var(--accent);
+}
+
+.mobile-nav a.active {
+  color: var(--accent);
 }
 
 .mobile-nav a:last-child {
@@ -211,7 +335,7 @@ nav.desktop-nav a:hover {
 .btn {
   display: inline-block;
   background: var(--accent);
-  color: #0d0d0f;
+  color: #ffffff;
   font-weight: 700;
   font-size: 0.875rem;
   padding: 0.75rem 2rem;
@@ -219,25 +343,30 @@ nav.desktop-nav a:hover {
   text-decoration: none;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  transition: opacity var(--transition);
+  transition: background var(--transition), opacity var(--transition);
   border: none;
   cursor: pointer;
 }
 
 .btn:hover {
-  opacity: 0.85;
+  background: var(--accent-hover);
 }
 
 .btn-ghost {
   background: transparent;
-  border: 1px solid var(--accent);
+  border: 1.5px solid var(--accent);
   color: var(--accent);
   margin-left: 0.75rem;
+}
+
+.btn-ghost:hover {
+  background: var(--accent-dim);
 }
 
 /* ── Sections ─────────────────────────────────────────────────────────────── */
 .section {
   padding: 5rem 1.5rem;
+  transition: background var(--transition);
 }
 
 .section-dark {
@@ -283,6 +412,17 @@ nav.desktop-nav a:hover {
   margin-top: 1.1rem;
 }
 
+.history-body {
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.history-body p + p {
+  margin-top: 1rem;
+}
+
 /* ── Tamil Quote Block ────────────────────────────────────────────────────── */
 .quote-block {
   background: var(--bg-raised);
@@ -291,6 +431,7 @@ nav.desktop-nav a:hover {
   border-left: 3px solid var(--accent);
   margin: 2rem 0;
   text-align: left;
+  transition: background var(--transition);
 }
 
 .quote-block p {
@@ -323,14 +464,16 @@ nav.desktop-nav a:hover {
   overflow: hidden;
   text-decoration: none;
   color: inherit;
-  transition: border-color var(--transition), transform var(--transition);
+  transition: border-color var(--transition), transform var(--transition),
+              background var(--transition), box-shadow var(--transition);
   display: flex;
   flex-direction: column;
 }
 
 .card:hover {
-  border-color: var(--accent-dim);
+  border-color: var(--accent);
   transform: translateY(-3px);
+  box-shadow: var(--shadow);
 }
 
 .card-image-placeholder {
@@ -342,7 +485,8 @@ nav.desktop-nav a:hover {
   justify-content: center;
   font-family: 'Cinzel', serif;
   font-size: 2.5rem;
-  color: var(--accent-dim);
+  color: var(--accent);
+  transition: background var(--transition);
 }
 
 .card-body {
@@ -354,6 +498,7 @@ nav.desktop-nav a:hover {
   font-weight: 600;
   font-size: 0.95rem;
   margin-bottom: 0.3rem;
+  color: var(--text-primary);
 }
 
 .card-subtitle {
@@ -367,13 +512,6 @@ nav.desktop-nav a:hover {
   font-size: 0.82rem;
 } */
 
-
-.page-title {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-/* Responsive Grid Layout */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -458,7 +596,6 @@ nav.desktop-nav a:hover {
   background: #0056b3;
 }
 
-
 /* ── Affiliates ───────────────────────────────────────────────────────────── */
 .affiliates {
   display: flex;
@@ -478,12 +615,14 @@ nav.desktop-nav a:hover {
   font-size: 0.85rem;
   font-weight: 500;
   letter-spacing: 0.03em;
-  transition: border-color var(--transition), color var(--transition);
+  transition: border-color var(--transition), color var(--transition),
+              background var(--transition), box-shadow var(--transition);
 }
 
 .affiliate-badge:hover {
-  border-color: var(--accent-dim);
+  border-color: var(--accent);
   color: var(--text-primary);
+  box-shadow: var(--shadow);
 }
 
 /* ── Events / Blog Grid ───────────────────────────────────────────────────── */
@@ -499,21 +638,24 @@ nav.desktop-nav a:hover {
   border-radius: var(--radius-lg);
   overflow: hidden;
   cursor: pointer;
-  transition: border-color var(--transition), transform var(--transition);
+  transition: border-color var(--transition), transform var(--transition),
+              background var(--transition), box-shadow var(--transition);
 }
 
 .blog-card:hover {
-  border-color: var(--accent-dim);
+  border-color: var(--accent);
   transform: translateY(-3px);
+  box-shadow: var(--shadow);
 }
 
 .blog-card-placeholder {
   width: 100%;
   height: 170px;
-  background: var(--bg-raised);
+  background: var(--bg-surface);
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background var(--transition);
 }
 
 .blog-card-placeholder span {
@@ -548,6 +690,7 @@ nav.desktop-nav a:hover {
 .blog-card-title {
   font-size: 0.95rem;
   font-weight: 600;
+  color: var(--text-primary);
 }
 
 .blog-card-desc {
@@ -562,6 +705,7 @@ nav.desktop-nav a:hover {
   background: var(--bg-surface);
   border-top: 1px solid var(--border);
   padding: 3.5rem 1.5rem 1.5rem;
+  transition: background var(--transition), border-color var(--transition);
 }
 
 .footer-grid {
@@ -587,6 +731,7 @@ nav.desktop-nav a:hover {
   line-height: 1.8;
   text-decoration: none;
   display: block;
+  transition: color var(--transition);
 }
 
 .footer-col a:hover {
@@ -638,92 +783,67 @@ nav.desktop-nav a:hover {
   margin-top: 2rem;
 }
 
-/* Container Pill Button */
-.theme-toggle-btn {
-  --pill-width: 110px;
-  --pill-height: 50px;
-  --thumb-width: 50px;
-  --thumb-height: 35px;
-  --padding: 7px;
-
+/* ── Inner Page Header (non-home pages) ───────────────────────────────────── */
+.page-header {
+  background: var(--hero-grad);
+  padding: 3.5rem 1.5rem;
+  text-align: center;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: var(--pill-width);
-  height: var(--pill-height);
-  background-color: #0b0f19;
-  border: 1px solid #c8922a;
-  border-radius: 100px;
-  cursor: pointer;
-  padding: 0 var(--padding);
   overflow: hidden;
-  transition: background-color 0.3s ease;
+  transition: background var(--transition);
 }
 
-/* Light mode background adjustment */
-.theme-toggle-btn.light {
-  background-color: #e2e8f0; 
+.page-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c8922a' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
 }
 
-/* Base Icon styling */
-.icon-wrapper {
-  z-index: 2;
+.page-header-content {
+  position: relative;
+}
+
+.page-header .tagline {
+  margin-bottom: 0.75rem;
+}
+
+.page-header h1 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.75rem, 4vw, 2.6rem);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.page-header p {
+  color: var(--text-secondary);
+  max-width: 560px;
+  margin: 0.75rem auto 0;
+  line-height: 1.7;
+}
+
+/* ── 404 Page ─────────────────────────────────────────────────────────────── */
+.not-found {
+  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: var(--thumb-width);
-  height: var(--thumb-height);
-  transition: color 0.3s ease;
+  text-align: center;
+  padding: 4rem 1.5rem;
 }
 
-.icon-wrapper svg {
-  width: 28px;
-  height: 28px;
+.not-found h1 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--accent);
+  margin-bottom: 1rem;
 }
 
-/* Icon States based on Active Theme */
-.theme-toggle-btn.dark .sun-icon {
-  color: #4b5563;
+.not-found p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
 }
-
-.theme-toggle-btn.dark .moon-icon {
-  color: #ffffff;
-}
-
-.theme-toggle-btn.light .sun-icon {
-  color: #1e293b;
-}
-
-.theme-toggle-btn.light .moon-icon {
-  color: #94a3b8;
-}
-
-/* The Sliding Capsule Thumb */
-.toggle-thumb {
-  position: absolute;
-  z-index: 1;
-  top: var(--padding);
-  left: var(--padding);
-  width: var(--thumb-width);
-  height: var(--thumb-height);
-  border-radius: 100px;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
-}
-
-/* Thumb colors & position swapping */
-.theme-toggle-btn.dark .toggle-thumb {
-  background-color: #222b44;
-  transform: translateX(calc(var(--pill-width) - var(--thumb-width) - (var(--padding) * 2)));
-}
-
-.theme-toggle-btn.light .toggle-thumb {
-  background-color: #ffffff;
-  transform: translateX(0);
-}
-
-
-/* ── Responsive: Mobile (≤ 768px) ────────────────────────────────────────── */
 @media (max-width: 768px) {
   nav.desktop-nav {
     display: none;
@@ -735,6 +855,10 @@ nav.desktop-nav a:hover {
 
   .footer-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .theme-toggle .toggle-label {
+    display: none;
   }
 }
 
