@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import { Link } from "react-router-dom";
-import { INSTRUCTORS, EVENTS, AFFILIATES } from "../data";
-import type { Instructor, EventItem, Affiliate } from "../data";
+import { INSTRUCTORS, EVENTS, AFFILIATES, ASSOICIATIONS } from "../data";
+import type { Instructor, EventItem, Affiliate, Association } from "../data";
 import wtsflogo from "../assets/images/logo.png"
 import officials from '../assets/json/officials.json';
 
@@ -45,13 +45,6 @@ const Home: FC = () => (
           state, and national level.
         </p>
         <p>
-          WTSF is a pioneer in practising one style of Silambam across India. 
-          WTSF promotes and standardizes its own curriculum (including instructor training programs like Kaaladi Kuthuvarisai) 
-          to help teach and popularize the art systematically. At present, 10 states in India have affiliated with our federation 
-          and are teaching this art. Karnataka, Andra Pradesh, Gujarat, Uttar Pradesh, Maharashtra, Diu and Daman, Puducherry, 
-          Andaman, Telangana, Odisha
-        </p>
-        <p>
           With over 2,000 students actively learning across various states of India, WTSF
           maintains a cadre of well-qualified instructors, judges, and masters. The Indian
           Government has recognised Silambam under the Khelo India Programme, and Tamil Nadu
@@ -79,7 +72,7 @@ const Home: FC = () => (
             </div>
             <div className="card-body">
               <h2 className="card-title">{off.name}</h2>
-              <p className="card-description">{off.position}</p>
+              <p className="card-text">{off.position}</p>
             </div>
           </div>
           
@@ -93,9 +86,9 @@ const Home: FC = () => (
 
     <section className="section">
       <div className="container">
-        <div className="section-title"><h2>Our Affiliates</h2></div>
+        <div className="section-title"><h2>In Association With</h2></div>
         <div className="affiliates">
-          {AFFILIATES.map((a: Affiliate) => (
+          {ASSOICIATIONS.map((a: Association) => (
             <div key={a.id} className="affiliate-badge">{a.alt}</div>
           ))}
         </div>
@@ -115,13 +108,17 @@ const Home: FC = () => (
             return (
               <Link key={ev.id} to="/events" className="blog-card" style={{ textDecoration: "none", color: "inherit" }}>
                 <div className="blog-card-placeholder">
-                  <span>WTSF</span>
+                    <img className="blog-card-image"
+                      src={ev.img}
+                      alt={ev.title}
+                    />
                 </div>
                 <div className="blog-card-body">
-                  <div className="blog-card-date">{formatted}</div>
+                  <div className="blog-card-date"></div>
                   <span className="blog-card-cat">{ev.category}</span>
-                  <div className="blog-card-title">{ev.title}</div>
                   <p className="blog-card-desc">{ev.desc}</p>
+                  <div className="blog-card-title">{ev.title}</div>
+                  
                 </div>
               </Link>
             );

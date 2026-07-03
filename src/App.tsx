@@ -1,32 +1,38 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react'; // 1. Added useEffect here
 import { Outlet } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-// Make sure to import Theme if it's exported from your data file
-//import { Theme } from './data'; 
 import './Styles.css';
 
 type Theme = "dark" | "light";
 
 const App = () => {
-  // 1. Manage the mobile menu state
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
-  // 2. Manage the theme state (defaulting to 'light' or whatever matches your Theme type)
-  const [theme, setTheme] = useState<Theme>('light');
+  // 2. Safely initialize theme from localStorage or system preference
+  const getInitialTheme = (): Theme => {
+    const stored = localStorage.getItem("wtsf-theme") as Theme | null;
+    if (stored === "dark" || stored === "light") return stored;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  };
 
-  // 3. Define the theme toggle function
+  const [theme, setTheme] = useState<Theme>(getInitialTheme);
+
+  // 3. Sync theme state with the DOM attribute and localStorage
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("wtsf-theme", theme);
+  }, [theme]);
+
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
   };
 
   return (
-    // Optionally apply the theme class to your root wrapper for global styles
     <div className={`app-container ${theme}`}>
       <ScrollToTop />
       
-      {/* 4. Pass the required props into the Header component */}
       <Header 
         menuOpen={menuOpen} 
         setMenuOpen={setMenuOpen} 

@@ -1,11 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import App from './App.tsx'
 import Home from './components/Home.tsx'
 import About from './components/About.tsx'
 import Events from './components/Events.tsx'
 import Instructors from './components/Instructors.tsx'
+import Contact from './components/Contact.tsx'
+import Gallery from './components/Gallery.tsx'
 import './index.css';
 // Import any other components you need (Instructors, Layout, etc.)
 
@@ -33,6 +35,19 @@ const router = createBrowserRouter([
       {
         path: 'instructors', // Matches '/events'
         element: <Instructors />
+      },
+      {
+        path: 'contact', // Matches '/events'
+        element: <Contact />
+      },
+      {
+        path: 'gallery', // Matches '/events'
+        element: <Gallery />
+      },
+      {
+        path: 'index.html',
+        // The 'replace' prop ensures /index.html is wiped from browser history
+        element: <Navigate to="/" replace />,
       }
       // Add more routes here as needed
     ]

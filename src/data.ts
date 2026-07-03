@@ -18,9 +18,15 @@ export interface Instructor {
 export interface EventItem {
   id: number;
   title: string;
+  img: string;
   date: string;
   category: string;
   desc: string;
+}
+
+export interface Association {
+  id: number;
+  alt: string;
 }
 
 export interface Affiliate {
@@ -56,18 +62,28 @@ export const INSTRUCTORS: Instructor[] = [
 ];
 
 export const EVENTS: EventItem[] = [
-  { id: 1, title: "National Level Silambam Open Championship", date: "2026-07-15", category: "Events", desc: "Every Year February Month." },
-  { id: 2, title: "State Level Silambam Open Championship",            date: "2026-08-05", category: "Events", desc: "Every Year December Month." },
-  { id: 3, title: "District Level Silambam Open Championship",       date: "2026-09-01", category: "Events", desc: "Every Year July Month." },
+  { id: 1, title: "National Level Silambam Open Championship", img: "/images/events/wtsf_national.png", date: "2026-07-15", category: "Events", desc: "Every Year February Month." },
+  { id: 2, title: "State Level Silambam Open Championship", img: "/images/events/wtsf_state.png", date: "2026-08-05", category: "Events", desc: "Every Year December Month." },
+  { id: 3, title: "District Level Silambam Open Championship", img: "/images/events/wtsf_district.png", date: "2026-09-01", category: "Events", desc: "Every Year July Month." },
+  { id: 4, title: "Silambam League Competition", img: "/images/events/wtsf_league.png", date: "2026-09-01", category: "Events", desc: "Every Year August Month." },
 ];
 
-export const AFFILIATES: Affiliate[] = [
+export const ASSOICIATIONS: Association[] = [
   { id: 1, alt: "NSRS - Khelo India" },
   { id: 2, alt: "Nehru Yuva Kendra Sangathan" },
   { id: 3, alt: "Fit India" },
   { id: 4, alt: "Ministry of Youth Affairs & Sports" },
   { id: 5, alt: "World Union of Martial Arts Federation" },
   { id: 6, alt: "Azaad - A Ray Of Hope" },
+];
+
+export const AFFILIATES: Affiliate[] = [
+  { id: 1, alt: "Andhra Pradesh" },
+  { id: 2, alt: "Gujarat" },
+  { id: 3, alt: "Uttar Pradesh" },
+  { id: 4, alt: "Karnataka" },
+  { id: 5, alt: "Odisha" },
+  { id: 6, alt: "Maharashtra" },
 ];
 
 export const CLASSES: ClassItem[] = [

@@ -1,5 +1,4 @@
-{
-  "country": [
+[
     {
       "id": 1,
       "name": "India",
@@ -13,4 +12,3 @@
 	  "status": "I"
     }
   ]
-}

@@ -1,5 +1,4 @@
-{
-  "district": [
+[
     {
       "id": 1,
       "cid": 1,
@@ -60,9 +59,72 @@
       "id": 8,
       "cid": 1,
       "sid": 1,
-      "name": "Salem",
+      "name": "Kanchipuram",
 	  "order": 8,
+	  "status": "A"
+    },
+    {
+      "id": 9,
+      "cid": 1,
+      "sid": 1,
+      "name": "Coimbatore",
+	  "order": 9,
+	  "status": "A"
+    },
+    {
+      "id": 10,
+      "cid": 1,
+      "sid": 1,
+      "name": "Salem",
+	  "order": 10,
 	  "status": "I"
+    },
+    {
+      "id": 11,
+      "cid": 1,
+      "sid": 2,
+      "name": "Andhra Pradesh",
+	  "order": 1,
+	  "status": "A"
+    },
+    {
+      "id": 12,
+      "cid": 1,
+      "sid": 3,
+      "name": "Gujarat",
+	  "order": 1,
+	  "status": "A"
+    },
+    {
+      "id": 13,
+      "cid": 1,
+      "sid": 4,
+      "name": "Uttar Pradesh",
+	  "order": 1,
+	  "status": "A"
+    },
+    {
+      "id": 14,
+      "cid": 1,
+      "sid": 5,
+      "name": "Karnataka",
+	  "order": 1,
+	  "status": "A"
+    },
+    {
+      "id": 15,
+      "cid": 1,
+      "sid": 6,
+      "name": "Odisha",
+	  "order": 1,
+	  "status": "A"
+    },
+    {
+      "id": 16,
+      "cid": 1,
+      "sid": 7,
+      "name": "Maharashtra",
+	  "order": 1,
+	  "status": "A"
     }
   ]
-}

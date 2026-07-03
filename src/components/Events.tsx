@@ -6,7 +6,7 @@ const Events: FC = () => (
   <>
     <section className="page-header">
       <div className="page-header-content">
-        <p className="tagline">Calendar</p>
+        {/* <p className="tagline">Calendar</p> */}
         <h1>Upcoming Events</h1>
         <p>Tournaments, camps, and workshops happening across the federation.</p>
       </div>

@@ -16,10 +16,24 @@ const Layout: FC = () => {
 
   const [theme, setTheme] = useState<Theme>(getInitialTheme);
 
+  // useEffect(() => {
+  //   document.documentElement.setAttribute("data-theme", theme);
+  //   localStorage.setItem("wtsf-theme", theme);
+  // }, [theme]);
+
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("wtsf-theme", theme);
-  }, [theme]);
+  const root = document.documentElement;
+  
+  if (theme === "dark") {
+    root.classList.add("dark");
+    root.classList.remove("light");
+  } else {
+    root.classList.add("light");
+    root.classList.remove("dark");
+  }
+  
+  localStorage.setItem("wtsf-theme", theme);
+}, [theme]);
 
   const toggleTheme = (): void => {
     setTheme((prev: Theme) => (prev === "dark" ? "light" : "dark"));
