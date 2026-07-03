@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import states from '../assets/json/state.json';
 
     const activeStates = [...states]

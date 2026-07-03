@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import { Link } from "react-router-dom";
-import { INSTRUCTORS, EVENTS, AFFILIATES, ASSOICIATIONS } from "../data";
-import type { Instructor, EventItem, Affiliate, Association } from "../data";
+import { EVENTS, ASSOICIATIONS } from "../data";
+import type { EventItem, Association } from "../data";
 import wtsflogo from "../assets/images/logo.png"
 import officials from '../assets/json/officials.json';
 
@@ -100,11 +100,11 @@ const Home: FC = () => (
         <div className="section-title"><h2>Upcoming Events</h2></div>
         <div className="blog-grid">
           {EVENTS.map((ev: EventItem) => {
-            const formatted: string = new Date(ev.date).toLocaleDateString("en-IN", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            });
+            // const formatted: string = new Date(ev.date).toLocaleDateString("en-IN", {
+            //   year: "numeric",
+            //   month: "long",
+            //   day: "numeric",
+            // });
             return (
               <Link key={ev.id} to="/events" className="blog-card" style={{ textDecoration: "none", color: "inherit" }}>
                 <div className="blog-card-placeholder">

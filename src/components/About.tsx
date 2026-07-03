@@ -1,8 +1,8 @@
 import type { FC } from "react";
 
-import { INSTRUCTORS, EVENTS, AFFILIATES, ASSOICIATIONS } from "../data";
-import type { Instructor, EventItem, Affiliate, Association } from "../data";
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutubeSquare } from "react-icons/fa";
+import { AFFILIATES } from "../data";
+import type {  Affiliate } from "../data";
+import { FaFacebookF, FaTwitter, FaInstagram, FaYoutubeSquare } from "react-icons/fa";
 
 
   const socials = [

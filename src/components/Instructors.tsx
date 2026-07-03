@@ -1,36 +1,14 @@
 import type { FC } from "react";
-import React, { useState } from 'react';
-import { INSTRUCTORS } from "../data";
-import type { Instructor } from "../data";
-import inst from '../assets/json/instructors.json';
-import states from '../assets/json/state.json';
+// import React, { useState } from 'react';
+// import { INSTRUCTORS } from "../data";
+// import type { Instructor } from "../data";
+//import inst from '../assets/json/instructors.json';
+//import states from '../assets/json/state.json';
 //import StateSelection from './StateSelection'
 //import DistrictSelection from './DistrictSelection'
 //import districts from '../assets/json/district.json';
-import DDLSelection from './DDLSelection';
+//import DDLSelection from './DDLSelection';
 import InstructorPage  from './Instructor';
-
-const activeInst = [...inst]
-    .filter(ins => ins.status === 'A')
-    .sort((a, b) => a.order - b.order);
-
-    // const activeStates = [...states]
-    // .filter(st => st.status === 'A')
-    // .sort((a, b) => a.order - b.order);
-
-
-    // const activeDistricts = [...districts]
-    // .filter(dt => dt.status === 'A')
-    // .sort((a, b) => a.order - b.order);
-
-
-    //  const filteredDistricts = activeDistricts
-    // .filter((dt) => {
-    //   const matchesState = selectedState ? dt.sid === Number(selectedState) : true;
-    //   const isActive = dt.status === 'A';
-    //   return matchesState && isActive;
-    // })
-    // .sort((a, b) => a.order - b.order);
 
 const Instructors: FC = () => (
   
