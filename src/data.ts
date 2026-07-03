@@ -62,10 +62,10 @@ export const INSTRUCTORS: Instructor[] = [
 ];
 
 export const EVENTS: EventItem[] = [
-  { id: 1, title: "National Level Silambam Open Championship", img: "/images/events/wtsf_national.png", date: "2026-07-15", category: "Events", desc: "Every Year February Month." },
-  { id: 2, title: "State Level Silambam Open Championship", img: "/images/events/wtsf_state.png", date: "2026-08-05", category: "Events", desc: "Every Year December Month." },
-  { id: 3, title: "District Level Silambam Open Championship", img: "/images/events/wtsf_district.png", date: "2026-09-01", category: "Events", desc: "Every Year July Month." },
-  { id: 4, title: "Silambam League Competition", img: "/images/events/wtsf_league.png", date: "2026-09-01", category: "Events", desc: "Every Year August Month." },
+  { id: 1, title: "National Level Silambam Open Championship", img: "images/events/wtsf_national.png", date: "2026-07-15", category: "Events", desc: "Every Year February Month." },
+  { id: 2, title: "State Level Silambam Open Championship", img: "images/events/wtsf_state.png", date: "2026-08-05", category: "Events", desc: "Every Year December Month." },
+  { id: 3, title: "District Level Silambam Open Championship", img: "images/events/wtsf_district.png", date: "2026-09-01", category: "Events", desc: "Every Year July Month." },
+  { id: 4, title: "Silambam League Competition", img: "images/events/wtsf_league.png", date: "2026-09-01", category: "Events", desc: "Every Year August Month." },
 ];
 
 export const ASSOICIATIONS: Association[] = [
