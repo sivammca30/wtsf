@@ -3,7 +3,7 @@
       "id": 1,
       "name": "KANNAN T",
       "position": "PRESIDENT/TECHNICAL DIRECTOR",
-      "imageUrl": "/images/officials/kannan.jpeg",
+      "imageUrl": "images/officials/kannan.jpeg",
 	  "order": 1,
 	  "status": "A"
     },
@@ -11,7 +11,7 @@
       "id": 2,
       "name": "MANIKANDAN M",
       "position": "VICE PRESIDENT",
-      "imageUrl": "/images/officials/manikandan.jpeg",
+      "imageUrl": "images/officials/manikandan.jpeg",
 	  "order": 2,
 	  "status": "A"
     },
@@ -19,7 +19,7 @@
       "id": 3,
       "name": "ARUNKUMAR B",
       "position": "TREASURER",
-      "imageUrl": "/images/officials/arunkumar.JPG",
+      "imageUrl": "images/officials/arunkumar.JPG",
 	  "order": 3,
 	  "status": "A"
     },
@@ -27,7 +27,7 @@
       "id": 4,
       "name": "NAGARAJAN C",
       "position": "SECRETARY",
-      "imageUrl": "/images/officials/nagarajan.jpeg",
+      "imageUrl": "images/officials/nagarajan.jpeg",
 	  "order": 4,
 	  "status": "A"
     },
@@ -35,7 +35,7 @@
       "id": 5,
       "name": "DINESH KUMAR",
       "position": "JOINT SECRETARY",
-      "imageUrl": "/images/officials/dineshkumar.jpeg",
+      "imageUrl": "images/officials/dineshkumar.jpeg",
 	  "order": 5,
 	  "status": "A"
     }

@@ -8,7 +8,7 @@
     "dname": "Chennai",
     "name": "KANNAN T",
     "position": "Chief Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Chennai/1_kannan.jpeg",
+    "imageUrl": "images/instructors/India/TamilNadu/Chennai/1_kannan.jpeg",
     "order": 1,
     "status": "A"
   },
@@ -21,7 +21,7 @@
     "dname": "Chennai",
     "name": "ARUNKUMAR B",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Chennai/2_arunkumar.JPG",
+    "imageUrl": "images/instructors/India/TamilNadu/Chennai/2_arunkumar.JPG",
     "order": 2,
     "status": "A"
   },
@@ -34,7 +34,7 @@
     "dname": "Chennai",
     "name": "BALAJI R",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Chennai/3_balaji.png",
+    "imageUrl": "images/instructors/India/TamilNadu/Chennai/3_balaji.png",
     "order": 3,
     "status": "A"
   },
@@ -47,7 +47,7 @@
     "dname": "Chennai",
     "name": "SIVASHANMUGAM U",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Chennai/4_sivashanmugam.jpeg",
+    "imageUrl": "images/instructors/India/TamilNadu/Chennai/4_sivashanmugam.jpeg",
     "order": 4,
     "status": "A"
   },
@@ -60,7 +60,7 @@
 "dname": "Chennai",
     "name": "BALAMURUGAN V",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Chennai/5_balamurugan_v.jpeg",
+    "imageUrl": "images/instructors/India/TamilNadu/Chennai/5_balamurugan_v.jpeg",
     "order": 5,
     "status": "A"
   },
@@ -73,7 +73,7 @@
 "dname": "Chennai",
     "name": "DHANASINGH N",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Chennai/6_dhanasingh.jpeg",
+    "imageUrl": "images/instructors/India/TamilNadu/Chennai/6_dhanasingh.jpeg",
     "order": 6,
     "status": "A"
   },
@@ -86,7 +86,7 @@
 "dname": "Chennai",
     "name": "SRIRAM B",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Chennai/7_sriram.JPG",
+    "imageUrl": "images/instructors/India/TamilNadu/Chennai/7_sriram.JPG",
     "order": 7,
     "status": "A"
   },
@@ -99,7 +99,7 @@
 "dname": "Chennai",
     "name": "SANJAI G",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Chennai/8_sanjai.jpg",
+    "imageUrl": "images/instructors/India/TamilNadu/Chennai/8_sanjai.jpg",
     "order": 8,
     "status": "A"
   },
@@ -112,7 +112,7 @@
 "dname": "Chennai",
     "name": "SURESH KUMAR",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Chennai/9_sureshkumar.jpg",
+    "imageUrl": "images/instructors/India/TamilNadu/Chennai/9_sureshkumar.jpg",
     "order": 9,
     "status": "A"
   },
@@ -125,7 +125,7 @@
 "dname": "Chennai",
     "name": "VIGNESH J",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Chennai/10_vignesh.jpg",
+    "imageUrl": "images/instructors/India/TamilNadu/Chennai/10_vignesh.jpg",
     "order": 10,
     "status": "A"
   },
@@ -138,7 +138,7 @@
 "dname": "Chennai",
     "name": "BALAMURUGAN J",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Chennai/11_balamurugan_j.JPG",
+    "imageUrl": "images/instructors/India/TamilNadu/Chennai/11_balamurugan_j.JPG",
     "order": 11,
     "status": "A"
   },
@@ -151,7 +151,7 @@
 "dname": "Chennai",
     "name": "MIRTHU SARANGAN S",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Chennai/12_mirthusarangan.JPG",
+    "imageUrl": "images/instructors/India/TamilNadu/Chennai/12_mirthusarangan.JPG",
     "order": 12,
     "status": "A"
   },
@@ -164,7 +164,7 @@
 "dname": "Chennai",
     "name": "VINOTH S",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Chennai/13_vinoth.png",
+    "imageUrl": "images/instructors/India/TamilNadu/Chennai/13_vinoth.png",
     "order": 13,
     "status": "A"
   },
@@ -177,7 +177,7 @@
 "dname": "Chennai",
     "name": "YUVARAJA S",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Chennai/14_yuvaraja.jpg",
+    "imageUrl": "images/instructors/India/TamilNadu/Chennai/14_yuvaraja.jpg",
     "order": 14,
     "status": "A"
   },
@@ -190,7 +190,7 @@
 "dname": "Chennai",
     "name": "ANBU SANTHOSH B",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Chennai/15_anbusanthosh.jpeg",
+    "imageUrl": "images/instructors/India/TamilNadu/Chennai/15_anbusanthosh.jpeg",
     "order": 15,
     "status": "A"
   },
@@ -203,7 +203,7 @@
 "dname": "Chennai",
     "name": "MAHESWARI K",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Chennai/16_Maheswari.png",
+    "imageUrl": "images/instructors/India/TamilNadu/Chennai/16_Maheswari.png",
     "order": 16,
     "status": "A"
   },
@@ -216,7 +216,7 @@
 "dname": "Chennai",
     "name": "VAISHALI M",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Chennai/17_vaishali.jpeg",
+    "imageUrl": "images/instructors/India/TamilNadu/Chennai/17_vaishali.jpeg",
     "order": 17,
     "status": "A"
   },
@@ -229,7 +229,7 @@
 "dname": "Chennai",
     "name": "HARISH RAJA S",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Chennai/18_harishraja.jpg",
+    "imageUrl": "images/instructors/India/TamilNadu/Chennai/18_harishraja.jpg",
     "order": 18,
     "status": "A"
   },
@@ -242,7 +242,7 @@
 "dname": "Chennai",
     "name": "KISHORE M",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Chennai/19_kishore.jpeg",
+    "imageUrl": "images/instructors/India/TamilNadu/Chennai/19_kishore.jpeg",
     "order": 19,
     "status": "A"
   },
@@ -255,7 +255,7 @@
 "dname": "Chennai",
     "name": "VIJAYARAJAN S",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Chennai/20_vijayarajan.jpeg",
+    "imageUrl": "images/instructors/India/TamilNadu/Chennai/20_vijayarajan.jpeg",
     "order": 20,
     "status": "A"
   },
@@ -268,7 +268,7 @@
     "dname": "Madurai",
     "name": "MANIKANDAN M",
     "position": "Chief Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Madurai/1_manikandan.jpeg",
+    "imageUrl": "images/instructors/India/TamilNadu/Madurai/1_manikandan.jpeg",
     "order": 1,
     "status": "A"
   },
@@ -281,7 +281,7 @@
     "dname": "Madurai",
     "name": "PANDIARAJAN R",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Madurai/2_pandiarajan.jpg",
+    "imageUrl": "images/instructors/India/TamilNadu/Madurai/2_pandiarajan.jpg",
     "order": 2,
     "status": "A"
   },
@@ -294,7 +294,7 @@
     "dname": "Madurai",
     "name": "KARUPPIAH K",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Madurai/3_karuppiah.jpg",
+    "imageUrl": "images/instructors/India/TamilNadu/Madurai/3_karuppiah.jpg",
     "order": 3,
     "status": "A"
   },
@@ -307,7 +307,7 @@
     "dname": "Madurai",
     "name": "ARUMUGAM B",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Madurai/4_arumugam.JPG",
+    "imageUrl": "images/instructors/India/TamilNadu/Madurai/4_arumugam.JPG",
     "order": 4,
     "status": "A"
   },
@@ -320,7 +320,7 @@
     "dname": "Madurai",
     "name": "ASHOK KUMAR C",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Madurai/5_ashokkumar.JPG",
+    "imageUrl": "images/instructors/India/TamilNadu/Madurai/5_ashokkumar.JPG",
     "order": 5,
     "status": "A"
   },
@@ -333,7 +333,7 @@
     "dname": "Madurai",
     "name": "NAGALAKSHMI S",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Madurai/6_nagalakshmi.jpeg",
+    "imageUrl": "images/instructors/India/TamilNadu/Madurai/6_nagalakshmi.jpeg",
     "order": 6,
     "status": "A"
   },
@@ -346,7 +346,7 @@
     "dname": "Madurai",
     "name": "BALAMURUGAN S",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Madurai/7_balamurugan.jpeg",
+    "imageUrl": "images/instructors/India/TamilNadu/Madurai/7_balamurugan.jpeg",
     "order": 7,
     "status": "A"
   },
@@ -359,7 +359,7 @@
     "dname": "Madurai",
     "name": "THANGARAJ B",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Madurai/8_thangaraj.jpeg",
+    "imageUrl": "images/instructors/India/TamilNadu/Madurai/8_thangaraj.jpeg",
     "order": 8,
     "status": "A"
   },
@@ -372,7 +372,7 @@
     "dname": "Madurai",
     "name": "SIVA G",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Madurai/9_siva.jpg",
+    "imageUrl": "images/instructors/India/TamilNadu/Madurai/9_siva.jpg",
     "order": 9,
     "status": "A"
   },
@@ -385,7 +385,7 @@
     "dname": "Madurai",
     "name": "KATHIRAVAN V",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Madurai/10_kathiravan.jpeg",
+    "imageUrl": "images/instructors/India/TamilNadu/Madurai/10_kathiravan.jpeg",
     "order": 10,
     "status": "A"
   },
@@ -398,7 +398,7 @@
     "dname": "Madurai",
     "name": "GOKULAKRISHNAN V",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Madurai/11_gokulakrishnan.jpeg",
+    "imageUrl": "images/instructors/India/TamilNadu/Madurai/11_gokulakrishnan.jpeg",
     "order": 11,
     "status": "A"
   },
@@ -411,7 +411,7 @@
     "dname": "Tenkasi",
     "name": "NAGARAJAN C",
     "position": "Chief Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Tenkasi/1_nagarajan.jpeg",
+    "imageUrl": "images/instructors/India/TamilNadu/Tenkasi/1_nagarajan.jpeg",
     "order": 1,
     "status": "A"
   },
@@ -424,7 +424,7 @@
     "dname": "Tiruvallur",
     "name": "DINESHKUMAR V",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Tiruvallur/1_dineshkumar.jpeg",
+    "imageUrl": "images/instructors/India/TamilNadu/Tiruvallur/1_dineshkumar.jpeg",
     "order": 1,
     "status": "A"
   },
@@ -437,7 +437,7 @@
     "dname": "Tiruvallur",
     "name": "SETHUPATHI S",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Tiruvallur/2-sethupathi.jpg",
+    "imageUrl": "images/instructors/India/TamilNadu/Tiruvallur/2-sethupathi.jpg",
     "order": 2,
     "status": "A"
   },
@@ -450,7 +450,7 @@
     "dname": "Tiruvallur",
     "name": "GUGAN K",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Tiruvallur/3_gugan.png",
+    "imageUrl": "images/instructors/India/TamilNadu/Tiruvallur/3_gugan.png",
     "order": 3,
     "status": "A"
   },
@@ -463,7 +463,7 @@
     "dname": "Virudhunagar",
     "name": "PONNUSAMY A",
     "position": "Chief Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Virudhunagar/1_ponnusamy.jpeg",
+    "imageUrl": "images/instructors/India/TamilNadu/Virudhunagar/1_ponnusamy.jpeg",
     "order": 1,
     "status": "A"
   },
@@ -476,7 +476,7 @@
     "dname": "Ranipet",
     "name": "KOTEESWARI U",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Ranipet/1_koteeswari.jpeg",
+    "imageUrl": "images/instructors/India/TamilNadu/Ranipet/1_koteeswari.jpeg",
     "order": 1,
     "status": "A"
   },
@@ -489,7 +489,7 @@
     "dname": "Ranipet",
     "name": "VIGNESH P",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Ranipet/2_vignesh.png",
+    "imageUrl": "images/instructors/India/TamilNadu/Ranipet/2_vignesh.png",
     "order": 2,
     "status": "A"
   },
@@ -502,7 +502,7 @@
     "dname": "Tiruvannamalai",
     "name": "VIJAY S",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Tiruvannamalai/1_vijay.jpg",
+    "imageUrl": "images/instructors/India/TamilNadu/Tiruvannamalai/1_vijay.jpg",
     "order": 1,
     "status": "A"
   },
@@ -515,7 +515,7 @@
     "dname": "Kanchipuram",
     "name": "AMARAN S",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Kanchipuram/1_amaran.JPG",
+    "imageUrl": "images/instructors/India/TamilNadu/Kanchipuram/1_amaran.JPG",
     "order": 1,
     "status": "A"
   },
@@ -528,7 +528,7 @@
     "dname": "Coimbatore",
     "name": "KUMARESAN DURAISAMY",
     "position": "Instructor",
-    "imageUrl": "/images/instructors/India/TamilNadu/Coimbatore/1_kumaresan.jpeg",
+    "imageUrl": "images/instructors/India/TamilNadu/Coimbatore/1_kumaresan.jpeg",
     "order": 1,
     "status": "A"
   },
@@ -541,7 +541,7 @@
     "dname": "Andhra Pradesh",
     "name": "KMD SHAKEEL",
     "position": "State President",
-    "imageUrl": "/images/instructors/India/AndhraPradesh/1_shakeel.png",
+    "imageUrl": "images/instructors/India/AndhraPradesh/1_shakeel.png",
     "order": 1,
     "status": "A"
   },
@@ -554,7 +554,7 @@
     "dname": "Andhra Pradesh",
     "name": "KMD SHAKEEL",
     "position": "State Secretary",
-    "imageUrl": "/images/instructors/India/AndhraPradesh/2_basha.png",
+    "imageUrl": "images/instructors/India/AndhraPradesh/2_basha.png",
     "order": 2,
     "status": "A"
   },
@@ -567,7 +567,7 @@
     "dname": "Gujarat",
     "name": "NAYAN A CHAVDA",
     "position": "State President",
-    "imageUrl": "/images/instructors/India/Gujarat/1_nayanchavda.jpeg",
+    "imageUrl": "images/instructors/India/Gujarat/1_nayanchavda.jpeg",
     "order": 1,
     "status": "A"
   },
@@ -580,7 +580,7 @@
     "dname": "Uttar Pradesh",
     "name": "SHOBH NATH PATEL ",
     "position": "State President",
-    "imageUrl": "/images/instructors/India/UttarPradesh/1_shobnath.jpg",
+    "imageUrl": "images/instructors/India/UttarPradesh/1_shobnath.jpg",
     "order": 1,
     "status": "A"
   },
@@ -593,7 +593,7 @@
     "dname": "Karnataka",
     "name": "ANWAR PASHA",
     "position": "State President",
-    "imageUrl": "/images/instructors/India/Karnataka/1_anwarpasha.jpeg",
+    "imageUrl": "images/instructors/India/Karnataka/1_anwarpasha.jpeg",
     "order": 1,
     "status": "A"
   },
@@ -606,7 +606,7 @@
     "dname": "Karnataka",
     "name": "SYED BILAL",
     "position": "State Secretary",
-    "imageUrl": "/images/instructors/India/Karnataka/2_syedbilal.jpeg",
+    "imageUrl": "images/instructors/India/Karnataka/2_syedbilal.jpeg",
     "order": 2,
     "status": "A"
   },
@@ -619,7 +619,7 @@
     "dname": "Odisha",
     "name": "ASHISH RANJAN MOHANTA",
     "position": "Chief Instructor",
-    "imageUrl": "/images/instructors/India/Odisha/1_ashish.png",
+    "imageUrl": "images/instructors/India/Odisha/1_ashish.png",
     "order": 1,
     "status": "A"
   },
@@ -632,7 +632,7 @@
     "dname": "Maharashtra",
     "name": "SUDHIR GANPAT KAMBLE",
     "position": "State President",
-    "imageUrl": "/images/instructors/India/Maharashtra/1_sudir.jpg",
+    "imageUrl": "images/instructors/India/Maharashtra/1_sudir.jpg",
     "order": 1,
     "status": "A"
   }

@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App.tsx'
 import Home from './components/Home.tsx'
 import About from './components/About.tsx'
@@ -47,12 +47,14 @@ const router = createBrowserRouter([
       {
         path: 'index.html',
         // The 'replace' prop ensures /index.html is wiped from browser history
-        element: <Navigate to="/" replace />,
+        element: <Home />
       }
       // Add more routes here as needed
     ]
   }
-])
+], {
+  basename: "/wtsf" // 👈 Add this line right here
+})
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
