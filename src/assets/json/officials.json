@@ -11,7 +11,7 @@
       "id": 2,
       "name": "MANIKANDAN M",
       "position": "VICE PRESIDENT",
-      "imageUrl": "images/officials/manikandan.jpeg",
+      "imageUrl": "images/officials/manikandan.png",
 	  "order": 2,
 	  "status": "A"
     },
@@ -27,7 +27,7 @@
       "id": 4,
       "name": "NAGARAJAN C",
       "position": "SECRETARY",
-      "imageUrl": "images/officials/nagarajan.jpeg",
+      "imageUrl": "images/officials/nagarajan.png",
 	  "order": 4,
 	  "status": "A"
     },
@@ -35,7 +35,7 @@
       "id": 5,
       "name": "DINESH KUMAR",
       "position": "JOINT SECRETARY",
-      "imageUrl": "images/officials/dineshkumar.jpeg",
+      "imageUrl": "images/officials/dineshkumar.png",
 	  "order": 5,
 	  "status": "A"
     }

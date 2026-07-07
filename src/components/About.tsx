@@ -1,7 +1,7 @@
 import type { FC } from "react";
 
-import { AFFILIATES } from "../data";
-import type {  Affiliate } from "../data";
+import { AFFILIATES, AFFILIATION_RULES } from "../data";
+import type {  Affiliate, Affiliate_Rule } from "../data";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutubeSquare } from "react-icons/fa";
 
 
@@ -64,9 +64,33 @@ const About: FC = () => (
           </div>
     </section>
 
-    
+      <section className="section">
+      <div className="container">
+        <div className="section-title"><h2>Join with WTSF</h2></div>
+        <div className="affiliates">
+          {/* Semantic ordered list */}
+          <ul style={{ paddingLeft: '20px' }}>
+            {AFFILIATION_RULES.map((a: Affiliate_Rule) => (
+              <li
+                key={a.id}
+                style={{
+                  marginBottom: '12px',
+                  paddingBottom: '8px'
+                }}
+              >
+                <div>
+                  <p>
+                    {a.alt}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    <section className="section ">
+    <section className="section  section-dark">
       
       <div className="section-title"><h2>WTSF - Social Media - Links</h2></div>
 
@@ -98,6 +122,8 @@ const About: FC = () => (
       </div>
     </div>
     </section>
+
+  
   </>
 );
 

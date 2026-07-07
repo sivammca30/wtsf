@@ -17,7 +17,7 @@ const Header: FC<HeaderProps> = ({ menuOpen, setMenuOpen, theme, toggleTheme }) 
   return (
     <header className="hdr">
       <div className="hdr-inner">
-        <RouterNavLink to="/" className="hdr-logo" onClick={() => setMenuOpen(false)}>
+        <RouterNavLink to="/home" className="hdr-logo" onClick={() => setMenuOpen(false)}>
           {/* <img
             src="/assets/uploads/logo/22434.png"
             alt="WTSF Logo"
@@ -46,9 +46,9 @@ const Header: FC<HeaderProps> = ({ menuOpen, setMenuOpen, theme, toggleTheme }) 
 
         {/* Mobile: theme toggle + hamburger */}
         <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-          <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
+          {/* <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
             <span className="toggle-icon">{theme === "dark" ? "☀️" : "🌙"}</span>
-          </button>
+          </button> */}
           <button
             className="nav-toggle"
             onClick={() => setMenuOpen((prev: boolean) => !prev)}

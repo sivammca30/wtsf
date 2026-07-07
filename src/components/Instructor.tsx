@@ -12,6 +12,22 @@ function Instructor() {
   const statesArray = Array.isArray(states) ? states : [];
   const districtsArray = Array.isArray(districts) ? districts : [];
   const instructorsArray = Array.isArray(instructors) ? instructors : [];
+  const [searchText, setSearchText] = useState('');
+
+  const searchValue = searchText.toLowerCase();
+
+const matchesSearch = (ins: any, districtName: string, stateName: string) => {
+
+    return (
+        ins.name?.toLowerCase().includes(searchValue) ||
+        ins.position?.toLowerCase().includes(searchValue) ||
+        ins.phone?.toLowerCase().includes(searchValue) ||
+        ins.email?.toLowerCase().includes(searchValue) ||
+        ins.qualification?.toLowerCase().includes(searchValue) ||
+        districtName.toLowerCase().includes(searchValue) ||
+        stateName.toLowerCase().includes(searchValue)
+    );
+};
 
   const activeStates = [...statesArray]
     .filter(st => st.status === 'A')
@@ -65,6 +81,20 @@ function Instructor() {
             </select>
           </div>
         </div>
+
+        <div className="dropdown-container">
+          <label htmlFor="search">Search for an instructor:</label>
+          <input
+            id="search"
+            type="text"
+            className="custom-select"
+            placeholder="Search for an instructor..."
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+          />
+        </div>
+        
+        
       </div>
 
       {/* --- NESTED ROSTER STRUCTURE CANVAS AREA --- */}
@@ -78,9 +108,32 @@ function Instructor() {
             return belongsToState && matchesDistrictFilter;
           });
 
-          const stateHasInstructors = instructorsArray.some(
-            ins => ins.status === 'A' && ins.sid === state.id && (!selectedDistrict || ins.did === Number(selectedDistrict))
-          );
+          // const stateHasInstructors = instructorsArray.some(
+          //   ins => ins.status === 'A' && ins.sid === state.id && (!selectedDistrict || ins.did === Number(selectedDistrict))
+          // );
+          const stateHasInstructors = instructorsArray.some((ins) => {
+
+            if (ins.status !== 'A') return false;
+
+            if (ins.sid !== state.id) return false;
+
+            if (selectedDistrict && ins.did !== Number(selectedDistrict))
+              return false;
+
+            const district = activeDistricts.find(d => d.id === ins.did);
+
+            if (
+              searchText &&
+              !matchesSearch(
+                ins,
+                district?.name || "",
+                state.name
+              )
+            )
+              return false;
+
+            return true;
+          });
 
           if (!stateHasInstructors) return null;
 
@@ -89,8 +142,27 @@ function Instructor() {
               <h2 className="state-header">📍 {state.name}</h2>
 
               {districtsInThisState.map((district) => {
+                // const districtInstructors = instructorsArray
+                //   .filter(ins => ins.status === 'A' && ins.sid === state.id && ins.did === district.id)
+                //   .sort((a, b) => a.order - b.order);
                 const districtInstructors = instructorsArray
-                  .filter(ins => ins.status === 'A' && ins.sid === state.id && ins.did === district.id)
+                  .filter((ins) => {
+
+                    if (ins.status !== 'A') return false;
+
+                    if (ins.sid !== state.id) return false;
+
+                    if (ins.did !== district.id) return false;
+
+                    if (
+                      searchText &&
+                      !matchesSearch(ins, district.name, state.name)
+                    ) {
+                      return false;
+                    }
+
+                    return true;
+                  })
                   .sort((a, b) => a.order - b.order);
 
                 if (districtInstructors.length === 0) return null;
@@ -103,17 +175,30 @@ function Instructor() {
 
                     <div className="instructor-grid">
                       {districtInstructors.map((instructor) => (
-                        <div key={instructor.id} className="instructor-card">
-                          <img 
-                            src={instructor.imageUrl} 
-                            alt={instructor.name} 
-                            className="instructor-avatar"
-                            onError={(e) => {
-                              (e.target as HTMLImageElement).src = 'https://placeholder.com';
-                            }}
-                          />
-                          <h4 className="instructor-name">{instructor.name}</h4>
-                          <p className="instructor-position">{instructor.position}</p>
+                        // <div key={instructor.id} className="instructor-card">
+                        //   <img 
+                        //     src={instructor.imageUrl} 
+                        //     alt={instructor.name} 
+                        //     className="instructor-avatar"
+                        //     onError={(e) => {
+                        //       (e.target as HTMLImageElement).src = 'https://placeholder.com';
+                        //     }}
+                        //   />
+                        //   <h4 className="instructor-name">{instructor.name}</h4>
+                        //   <p className="instructor-position">{instructor.position}</p>
+                        // </div>
+                        <div className="card" key={instructor.id}>
+                          <div className="card-image-wrapper">
+                            <img
+                              src={instructor.imageUrl}
+                              alt={instructor.name}
+                              className="card-image"
+                            />
+                          </div>
+                          <div className="card-body">
+                            <h2 className="card-title">{instructor.name}</h2>
+                            <p className="card-text">{instructor.position}</p>
+                          </div>
                         </div>
                       ))}
                     </div>

@@ -568,7 +568,7 @@ nav.desktop-nav a.active::after {
 /* Ensures uniform image sizes across cards */
 .card-image-wrapper {
   width: 100%;
-  height: 300px;     /* Adjust this height to match your design */
+  height: 400px;     /* Adjust this height to match your design */
   overflow: hidden;  /* Clips any image portion overflowing the box */
   background-color: #f0f0f0; /* Fallback background for missing images */
 }
@@ -730,6 +730,88 @@ nav.desktop-nav a.active::after {
 }
 
 .blog-card-desc {
+  margin-top: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 1.5rem;
+}
+
+.event-card {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color var(--transition), transform var(--transition),
+              background var(--transition), box-shadow var(--transition);
+}
+
+.event-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.event-card-image {
+  width: 100%;
+  /* aspect-ratio: 16 / 9; */
+  object-fit: cover;
+}
+
+.event-card-placeholder {
+  width: 100%;
+  /* height: 170px; */
+  background: var(--bg-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  transition: background var(--transition);
+}
+
+.event-card-placeholder span {
+  font-family: 'Cinzel', serif;
+  color: var(--accent);
+  font-size: 1.3rem;
+  letter-spacing: 0.05em;
+}
+
+.event-card-body {
+  padding: 1.1rem;
+}
+
+.event-card-date {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.3rem;
+}
+
+.event-card-cat {
+  display: inline-block;
+  font-size: 0.7rem;
+  background: var(--accent-dim);
+  color: var(--accent);
+  padding: 0.15rem 0.55rem;
+  border-radius: 20px;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.event-card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.event-card-desc {
   margin-top: 0.5rem;
   color: var(--text-secondary);
   font-size: 0.82rem;
@@ -1070,7 +1152,7 @@ nav.desktop-nav a.active::after {
 /* Instructors Responsive Card Grid */
 .instructor-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 16px;
 }
 

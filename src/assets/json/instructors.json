@@ -60,7 +60,7 @@
 "dname": "Chennai",
     "name": "BALAMURUGAN V",
     "position": "Instructor",
-    "imageUrl": "images/instructors/India/TamilNadu/Chennai/5_balamurugan_v.jpeg",
+    "imageUrl": "images/instructors/India/TamilNadu/Chennai/5_balamurugan_v.png",
     "order": 5,
     "status": "A"
   },
@@ -166,7 +166,7 @@
     "position": "Instructor",
     "imageUrl": "images/instructors/India/TamilNadu/Chennai/13_vinoth.png",
     "order": 13,
-    "status": "A"
+    "status": "I"
   },
   {
     "id": 14,
@@ -268,7 +268,7 @@
     "dname": "Madurai",
     "name": "MANIKANDAN M",
     "position": "Chief Instructor",
-    "imageUrl": "images/instructors/India/TamilNadu/Madurai/1_manikandan.jpeg",
+    "imageUrl": "images/instructors/India/TamilNadu/Madurai/1_manikandan.png",
     "order": 1,
     "status": "A"
   },
@@ -411,7 +411,7 @@
     "dname": "Tenkasi",
     "name": "NAGARAJAN C",
     "position": "Chief Instructor",
-    "imageUrl": "images/instructors/India/TamilNadu/Tenkasi/1_nagarajan.jpeg",
+    "imageUrl": "images/instructors/India/TamilNadu/Tenkasi/1_nagarajan.png",
     "order": 1,
     "status": "A"
   },
@@ -424,7 +424,7 @@
     "dname": "Tiruvallur",
     "name": "DINESHKUMAR V",
     "position": "Instructor",
-    "imageUrl": "images/instructors/India/TamilNadu/Tiruvallur/1_dineshkumar.jpeg",
+    "imageUrl": "images/instructors/India/TamilNadu/Tiruvallur/1_dineshkumar.png",
     "order": 1,
     "status": "A"
   },
@@ -634,6 +634,19 @@
     "position": "State President",
     "imageUrl": "images/instructors/India/Maharashtra/1_sudir.jpg",
     "order": 1,
+    "status": "A"
+  },
+  {
+    "id": 50,
+    "cid": 1,
+    "sid": 1,
+    "sname": "TamilNadu",
+    "did": 7,
+    "dname": "Tiruvannamalai",
+    "name": "VINOTH S",
+    "position": "Instructor",
+    "imageUrl": "images/instructors/India/TamilNadu/Tiruvannamalai/2_vinoth.png",
+    "order": 2,
     "status": "A"
   }
 ]

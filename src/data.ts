@@ -34,6 +34,16 @@ export interface Affiliate {
   alt: string;
 }
 
+export interface Affiliate_Rule {
+  id: number;
+  alt: string;
+}
+
+export interface Grading {
+  id: number;
+  alt: string;
+}
+
 export interface ClassItem {
   id: number;
   name: string;
@@ -44,7 +54,7 @@ export interface ClassItem {
 
 // ── Routes ────────────────────────────────────────────────────────────────────
 export const NAV_LINKS: NavLink[] = [
-  { label: "Home",        to: "/" },
+  { label: "Home",        to: "/home" },
   { label: "About",       to: "/about" },
   // { label: "History",     to: "/history" },
   { label: "Instructors", to: "/instructors" },
@@ -68,6 +78,19 @@ export const EVENTS: EventItem[] = [
   { id: 4, title: "Silambam League Competition", img: "images/events/wtsf_league.png", date: "2026-09-01", category: "Events", desc: "Every Year August Month." },
 ];
 
+export const UPCOMINGEVENTS: EventItem[] = [
+  { id: 1, title: "District Level Silambam Open Championship", img: "images/events/tenkasi_district.jpeg", date: "2026-07-26", category: "Events", desc: "Tenkasi" },
+  { id: 2, title: "Silambam League Championship", img: "images/events/wtsf_league_match.png", date: "2026-08-23", category: "Events", desc: "Chennai" },
+  
+];
+
+export const MOMENTS: EventItem[] = [
+  { id: 1, title: "International Yoga Day Celebration - 2026", img: "images/events/wtsf_national.png", date: "2026-06-21", category: "Celebration", desc: "" },
+  { id: 2, title: "Womens Day - Self Defense - Training Camp", img: "images/events/wtsf_state.png", date: "2026-03-08", category: "Workshop", desc: "" },
+  { id: 3, title: "WTSF - Silambam Grading - 2026", img: "images/events/wtsf_district.png", date: "2026-08-02", category: "Grading", desc: "" },
+  
+];
+
 export const ASSOICIATIONS: Association[] = [
   { id: 1, alt: "NSRS - Khelo India" },
   { id: 2, alt: "Nehru Yuva Kendra Sangathan" },
@@ -84,6 +107,21 @@ export const AFFILIATES: Affiliate[] = [
   { id: 4, alt: "Karnataka" },
   { id: 5, alt: "Odisha" },
   { id: 6, alt: "Maharashtra" },
+];
+
+export const GRADINGS: Grading[] = [
+  { id: 1, alt: "KATCHAI - Beginner" },
+  { id: 2, alt: "KAAPPU - Intermediate" },
+  { id: 3, alt: "PARIVATTAM - Advanced" }
+];
+
+export const AFFILIATION_RULES: Affiliate_Rule[] = [
+  { id: 1, alt: "Affiliated instructor should follow WTSF Style, Lesson, Uniform and Grading Procedures." },
+  { id: 2, alt: "Affiliation should be renewed every year." },
+  { id: 3, alt: "Affiliation will be given to an instructor for a State/Distict/Federation." },
+  { id: 4, alt: "Affiliated instructor should attend all the WTSF Training Camps." },
+  { id: 5, alt: "WTSF will arrange Training Camps for affiliated instructors in their State/District upon prior intimation." },
+  { id: 6, alt: "WTSF will have all the rights to change the rules and regulations with the approval of executive members." }
 ];
 
 export const CLASSES: ClassItem[] = [
