@@ -1,62 +1,126 @@
 import type { FC } from "react";
-// import React, { useState } from 'react';
-// import { INSTRUCTORS } from "../data";
-// import type { Instructor } from "../data";
-//import inst from '../assets/json/instructors.json';
-//import states from '../assets/json/state.json';
-//import StateSelection from './StateSelection'
-//import DistrictSelection from './DistrictSelection'
-//import districts from '../assets/json/district.json';
-//import DDLSelection from './DDLSelection';
+import { useState } from "react";
+import { FaThLarge, FaList,FaImages } from "react-icons/fa";
+
 import InstructorPage  from './Instructor';
 
-const Instructors: FC = () => (
-  
-  <>
-  
+type ViewMode = "card" | "list" | "carousel";
+
+const Instructors: FC = () => {
+  const [viewMode, setViewMode] = useState<"card" | "list" | "carousel">("card");
+
+  return (  
+  <>  
     <section className="page-header">
-      <div className="page-header-content">
-        {/* <p className="tagline">Our Team</p> */}
+      <div className="page-header-content">        
         <h1>WTSF Instructors</h1>
         <p>WTSF Affiliated/Qualified instructors carrying forward the Silambattam tradition across world.</p>
       </div>
     </section>
 
      <section className="section-small">
-          <div className="container">
+          <div className="container">            
+          {/* View Mode Buttons */}
+          {/* EXACT SAME VIEW SWITCHER AS GALLERY */}
+
+          <div className="view-switcher-container">
+
+            <span className="switcher-label">
+              View Mode:
+            </span>
+
+
+            <div className="button-group">
+
+              {/* CARD */}
+
+              <button
+                type="button"
+                className={`switch-btn ${
+                  viewMode === "card"
+                    ? "active"
+                    : ""
+                }`}
+                onClick={() =>
+                  setViewMode("card")
+                }
+                title="Grid Card View"
+              >
+
+                <FaThLarge />
+
+                <span className="btn-text">
+                  Cards
+                </span>
+
+              </button>
+
+
+              {/* LIST */}
+
+              <button
+                type="button"
+                className={`switch-btn ${
+                  viewMode === "list"
+                    ? "active"
+                    : ""
+                }`}
+                onClick={() =>
+                  setViewMode("list")
+                }
+                title="List View"
+              >
+
+                <FaList />
+
+                <span className="btn-text">
+                  List
+                </span>
+
+              </button>
+
+
+              {/* CAROUSEL */}
+
+              <button
+                type="button"
+                className={`switch-btn ${
+                  viewMode === "carousel"
+                    ? "active"
+                    : ""
+                }`}
+                onClick={() =>
+                  setViewMode("carousel")
+                }
+                title="Carousel Slider View"
+              >
+
+                <FaImages />
+
+                <span className="btn-text">
+                  Carousel
+                </span>
+
+              </button>
+
+            </div>
+
+          </div>
+
+
            {/* <StateSelection/> */}
            {/* <DistrictSelection/> */}
           {/* <DDLSelection/> */}
-          <InstructorPage/>
+          <InstructorPage viewMode={viewMode} />
          
        
           </div>
         </section>
 
-{/*
-    <section className="section">
-      <div className="container">
-        <div className="card-grid">
-          {activeInst.map((inst) => (
-            <div key={inst.id} className="card">
-              <div className="card-image-wrapper">
-                <img 
-                src={inst.imageUrl} 
-                alt={inst.name} 
-                className="card-image" 
-              />
-              </div>
-              <div className="card-body">
-                <div className="card-title">{inst.name}</div>
-                
-                <div className="card-text">{inst.position}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-     </section> */}
-  </>
-);
+</>
+  
+  );
+}
+
 
 export default Instructors;
