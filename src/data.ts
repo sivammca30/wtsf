@@ -52,6 +52,12 @@ export interface ClassItem {
   desc: string;
 }
 
+export interface Social {
+  id: number;
+  alt: string;
+  url: string;
+}
+
 // ── Routes ────────────────────────────────────────────────────────────────────
 export const NAV_LINKS: NavLink[] = [
   { label: "Home",        to: "/home" },
@@ -80,7 +86,7 @@ export const EVENTS: EventItem[] = [
 
 export const UPCOMINGEVENTS: EventItem[] = [
   { id: 1, title: "District Level Silambam Open Championship", img: "images/events/tenkasi_district.jpeg", date: "2026-07-26", category: "Events", desc: "Tenkasi" },
-  { id: 2, title: "Silambam League Championship", img: "images/events/wtsf_league_match.png", date: "2026-08-23", category: "Events", desc: "Chennai" },
+  { id: 2, title: "Silambam League Championship", img: "images/events/league_match.jpeg", date: "2026-08-23", category: "Events", desc: "Chennai" },
   
 ];
 
@@ -131,6 +137,11 @@ export const CLASSES: ClassItem[] = [
   { id: 4, name: "Kids Silambam (6–12 yrs)", level: "Youth",        schedule: "Sat, Sun — 9:00 to 10:00 AM", desc: "Discipline-focused introductory classes for children." },
 ];
 
-export const SOCIAL_ICONS: string[] = ["F", "I", "X", "Y"];
+export const SOCIAL_ICONS: Social[] = [
+  {id: 1, alt: "F", url: ""},
+  {id: 2, alt: "I", url: ""},
+  {id: 3, alt: "X", url: ""},
+  {id: 4, alt: "Y", url: ""}
+];
 export const QUICK_LINKS: string[]   = ["About Us", "Instructors", "Blog", "Events"];
 export const PROGRAMS: string[]      = ["Classes", "Training", "Workshops"];

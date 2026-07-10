@@ -1,6 +1,13 @@
 import type { FC } from "react";
 import { Link } from "react-router-dom";
-import { SOCIAL_ICONS } from "../data";
+import { FaFacebookF, FaTwitter, FaInstagram, FaYoutubeSquare } from "react-icons/fa";
+
+const socials = [
+  { icon: <FaFacebookF />, url: "https://www.facebook.com/share/1D2NXAP8J6/", text: "Facebook" },
+  { icon: <FaInstagram />, url: "https://www.instagram.com/wtsfsilambam/", text: "Instagram" },
+  { icon: <FaYoutubeSquare />, url: "https://www.youtube.com/@worldtraditionalsilambatta4819", text: "YouTube" },
+  { icon: <FaTwitter />, url: "https://twitter.com/wtsfsilambam?t=Upr6UJ9aXxtp2aIT-rINwg&s=08", text: "Twitter" },
+];
 
 const Footer: FC = () => (
   <footer className="site-footer">
@@ -12,8 +19,17 @@ const Footer: FC = () => (
           Silambattam across India and the world.
         </p>
         <div className="footer-social">
-          {SOCIAL_ICONS.map((icon: string) => (
-            <a key={icon} href="#" aria-label={icon}>{icon}</a>
+          {socials.map((item, index) => (
+            <a
+              key={index}
+              href={item.url}
+              className="social-media-circle"
+              aria-label={item.text}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="social-media-icon">{item.icon}</span>
+            </a>
           ))}
         </div>
       </div>
@@ -22,15 +38,16 @@ const Footer: FC = () => (
         <h4>Quick Links</h4>
         <Link to="/about">About Us</Link>
         <Link to="/instructors">Instructors</Link>
-        <Link to="/history">History</Link>
-        <Link to="/events">Events</Link>
+        {/* <Link to="/history">History</Link> */}
+
       </div>
 
       <div className="footer-col">
         <h4>Programs</h4>
-        <Link to="/classes">Classes</Link>
+        <Link to="/events">Events</Link>
+        {/* <Link to="/classes">Classes</Link>
         <Link to="/instructors">Training</Link>
-        <Link to="/events">Workshops</Link>
+        <Link to="/events">Workshops</Link> */}
       </div>
 
       <div className="footer-col">

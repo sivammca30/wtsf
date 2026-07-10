@@ -177,7 +177,7 @@ const matchesSearch = (ins: any, districtName: string, stateName: string) => {
                       {districtInstructors.map((instructor) => (
                         // <div key={instructor.id} className="instructor-card">
                         //   <img 
-                        //     src={instructor.imageUrl} 
+                        //     src={instructor.src} 
                         //     alt={instructor.name} 
                         //     className="instructor-avatar"
                         //     onError={(e) => {
@@ -190,7 +190,7 @@ const matchesSearch = (ins: any, districtName: string, stateName: string) => {
                         <div className="card" key={instructor.id}>
                           <div className="card-image-wrapper">
                             <img
-                              src={instructor.imageUrl}
+                              src={instructor.src}
                               alt={instructor.name}
                               className="card-image"
                             />

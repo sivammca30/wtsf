@@ -65,7 +65,7 @@ const Home: FC = () => (
           <div className="card" key={off.id}>
             <div className="card-image-wrapper">
               <img 
-                src={off.imageUrl} 
+                src={off.src} 
                 alt={off.name} 
                 className="card-image" 
               />
