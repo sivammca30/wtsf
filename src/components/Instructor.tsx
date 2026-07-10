@@ -436,9 +436,9 @@ const matchesSearch = (ins: any, districtName: string, stateName: string) => {
                                   </h3>
 
                                   <p>
-                                    <strong>
+                                    {/* <strong>
                                       Position:
-                                    </strong>{" "}
+                                    </strong>{" "} */}
                                     {instructor.position}
                                   </p>
 

@@ -316,7 +316,7 @@ nav.desktop-nav a.active::after {
 }
 
 .tagline {
-  font-size: 0.78rem;
+  font-size: 1.25rem;
   letter-spacing: 0.28em;
   color: var(--accent);
   font-weight: 600;
