@@ -34,3 +34,13 @@ Add a homepage key at the top level of the JSON file using your GitHub informati
 ## Step 4: Trigger the Build and Deployment
 
 Execute: npm run deploy
+
+
+
+### gsap implementation
+
+https://reactbits.dev/get-started/installation
+
+## installation
+
+npm install gsap
