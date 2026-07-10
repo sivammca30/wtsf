@@ -1555,9 +1555,10 @@ nav.desktop-nav a.active::after {
   display: flex;
   background: var(--bg-surface);
   border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
+  border-radius: 8px;
   overflow: hidden;
   box-shadow: var(--shadow);
+  padding: 5px 10px 5px 10px;
 }
 
 .switch-btn {
@@ -1794,6 +1795,165 @@ main.sphere-main {
 .edge-fade--bottom {
   bottom: 0;
 }
+
+
+/* =========================================
+   INSTRUCTOR LIST VIEW
+========================================= */
+
+.instructor-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.instructor-list-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  width: 100%;
+  min-height: 150px;
+
+  padding: 15px;
+
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+
+/* FIXED IMAGE SIZE FOR EVERY INSTRUCTOR */
+
+.instructor-list-image {
+  width: 130px;
+  height: 130px;
+
+  min-width: 130px;
+  flex-shrink: 0;
+
+  object-fit: cover;
+  object-position: center top;
+
+  border-radius: 8px;
+  display: block;
+}
+
+
+/* TEXT SECTION */
+
+.instructor-list-content {
+  flex: 1;
+}
+
+.instructor-list-content h3 {
+  margin: 0 0 10px 0;
+
+  font-size: 20px;
+  color: var(--accent);
+}
+
+.instructor-list-content p {
+  margin: 5px 0;
+
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+/* =========================================
+   INSTRUCTOR CAROUSEL VIEW
+========================================= */
+.instructor-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 0 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instructor-carousel-card {
+  width: 100%;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.instructor-carousel-image {
+  display: block;
+  width: 100%;
+  height: 400px;
+
+  object-fit: cover;
+  object-position: center top;
+}
+
+.instructor-carousel-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.instructor-carousel-info h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  color: var(--accent);
+}
+
+.instructor-carousel-info p {
+  margin: 0 0 10px;
+  color: var(--text-secondary);
+}
+
+.carousel-count {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 44px;
+  height: 44px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: var(--accent);
+  color: #ffffff;
+
+  font-size: 20px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 10;
+}
+
+.carousel-prev {
+  left: 0;
+}
+
+.carousel-next {
+  right: 0;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  background: var(--accent-hover);
+}
+
 /* _____________________________________________________________________*/
 
 /* Responsive Hide Text on Mobile screens if needed */
