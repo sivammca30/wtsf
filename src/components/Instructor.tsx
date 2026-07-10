@@ -152,7 +152,7 @@ const matchesSearch = (ins: any, districtName: string, stateName: string) => {
         <div className="dropdown-container">
           <label htmlFor="district-select">Choose a District: </label>
           <div className="select-wrapper">
-            <select id="district-select" value={selectedDistrict} onChange={(e) => setSelectedDistrict(e.target.value)} className="custom-select">
+            <select id="district-select" value={selectedDistrict} onChange={handleDistrictChange} className="custom-select">
               <option value="">-- All Districts --</option>
               {filteredDistrictsForDropdown.map((dt) => (
                 <option key={dt.id} value={dt.id}>{dt.name}</option>
@@ -169,7 +169,7 @@ const matchesSearch = (ins: any, districtName: string, stateName: string) => {
             className="custom-select"
             placeholder="Search for an instructor..."
             value={searchText}
-            onChange={(e) => setSearchText(e.target.value)}
+            onChange={handleSearchChange}
           />
         </div>
         
