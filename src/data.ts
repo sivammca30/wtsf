@@ -34,6 +34,11 @@ export interface Affiliate {
   alt: string;
 }
 
+export interface Program {
+  id: number;
+  alt: string;
+}
+
 export interface Affiliate_Rule {
   id: number;
   alt: string;
@@ -52,6 +57,12 @@ export interface ClassItem {
   desc: string;
 }
 
+export interface Social {
+  id: number;
+  alt: string;
+  url: string;
+}
+
 // ── Routes ────────────────────────────────────────────────────────────────────
 export const NAV_LINKS: NavLink[] = [
   { label: "Home",        to: "/home" },
@@ -59,7 +70,7 @@ export const NAV_LINKS: NavLink[] = [
   // { label: "History",     to: "/history" },
   { label: "Instructors", to: "/instructors" },
   { label: "Events",      to: "/events" },
-  // { label: "Classes",     to: "/classes" },
+  { label: "Gallery",     to: "/gallery" },
   { label: "Contact",     to: "/contact" },
 ];
 
@@ -80,7 +91,8 @@ export const EVENTS: EventItem[] = [
 
 export const UPCOMINGEVENTS: EventItem[] = [
   { id: 1, title: "District Level Silambam Open Championship", img: "images/events/tenkasi_district.jpeg", date: "2026-07-26", category: "Events", desc: "Tenkasi" },
-  { id: 2, title: "Silambam League Championship", img: "images/events/wtsf_league_match.png", date: "2026-08-23", category: "Events", desc: "Chennai" },
+  { id: 2, title: "Silambam Grading Function", img: "images/events/silambam_grading.jpeg", date: "2026-08-02", category: "Events", desc: "Chennai" },
+  { id: 3, title: "Silambam League Championship", img: "images/events/league_match.jpeg", date: "2026-08-23", category: "Events", desc: "Chennai" }
   
 ];
 
@@ -88,6 +100,12 @@ export const MOMENTS: EventItem[] = [
   { id: 1, title: "International Yoga Day Celebration - 2026", img: "images/events/wtsf_national.png", date: "2026-06-21", category: "Celebration", desc: "" },
   { id: 2, title: "Womens Day - Self Defense - Training Camp", img: "images/events/wtsf_state.png", date: "2026-03-08", category: "Workshop", desc: "" },
   { id: 3, title: "WTSF - Silambam Grading - 2026", img: "images/events/wtsf_district.png", date: "2026-08-02", category: "Grading", desc: "" },
+  
+];
+
+
+export const GALLERYMOMENTS: EventItem[] = [
+  { id: 1, title: "International Yoga Day Celebration - 2026", img: "images/events/wtsf_national.png", date: "2026-06-21", category: "Celebration", desc: "" },
   
 ];
 
@@ -107,6 +125,12 @@ export const AFFILIATES: Affiliate[] = [
   { id: 4, alt: "Karnataka" },
   { id: 5, alt: "Odisha" },
   { id: 6, alt: "Maharashtra" },
+];
+
+export const PROGRAMS: Program[] = [
+  { id: 1, alt: "Silambam Competitions/Tournament Organizer" },
+  { id: 2, alt: "Silambam Training Camps" },
+  { id: 3, alt: "Silambam Workshops" }
 ];
 
 export const GRADINGS: Grading[] = [
@@ -131,6 +155,10 @@ export const CLASSES: ClassItem[] = [
   { id: 4, name: "Kids Silambam (6–12 yrs)", level: "Youth",        schedule: "Sat, Sun — 9:00 to 10:00 AM", desc: "Discipline-focused introductory classes for children." },
 ];
 
-export const SOCIAL_ICONS: string[] = ["F", "I", "X", "Y"];
+export const SOCIAL_ICONS: Social[] = [
+  {id: 1, alt: "F", url: ""},
+  {id: 2, alt: "I", url: ""},
+  {id: 3, alt: "X", url: ""},
+  {id: 4, alt: "Y", url: ""}
+];
 export const QUICK_LINKS: string[]   = ["About Us", "Instructors", "Blog", "Events"];
-export const PROGRAMS: string[]      = ["Classes", "Training", "Workshops"];

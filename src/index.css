@@ -1,9 +1,13 @@
 /* src/index.css */
+/* @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist"; */
 
 /* --- INTER FONT --- */
-@font-face {
+ @font-face {
   font-family: 'Inter';
-  src: url('./assets/fonts/Inter/Inter_18pt-Regular.ttf') format('truetype');
+  src: url('../assets/fonts/Inter/Inter_18pt-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
@@ -23,7 +27,6 @@
 }
 
 
-/* --- CINZEL FONT --- */
 @font-face {
   font-family: 'Cinzel';
   src: url('./assets/fonts/Cinzel/Cinzel-Regular.ttf') format('truetype');
@@ -43,4 +46,4 @@
   src: url('./assets/fonts/Cinzel/Cinzel-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
-}
+} 

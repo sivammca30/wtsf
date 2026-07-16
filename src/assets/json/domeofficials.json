@@ -1,0 +1,42 @@
+[
+    {
+      "id": 1,
+      "alt": "KANNAN T",
+      "position": "PRESIDENT/TECHNICAL DIRECTOR",
+      "src": "images/officials/kannan.jpeg",
+	  "order": 1,
+	  "status": "A"
+    },
+    {
+      "id": 2,
+      "alt": "MANIKANDAN M",
+      "position": "VICE PRESIDENT",
+      "src": "images/officials/manikandan.png",
+	  "order": 2,
+	  "status": "A"
+    },
+    {
+      "id": 3,
+      "alt": "ARUNKUMAR B",
+      "position": "TREASURER",
+      "src": "images/officials/arunkumar.JPG",
+	  "order": 3,
+	  "status": "A"
+    },
+    {
+      "id": 4,
+      "alt": "NAGARAJAN C",
+      "position": "SECRETARY",
+      "src": "images/officials/nagarajan.png",
+	  "order": 4,
+	  "status": "A"
+    },
+    {
+      "id": 5,
+      "alt": "DINESH KUMAR",
+      "position": "JOINT SECRETARY",
+      "src": "images/officials/dineshkumar.png",
+	  "order": 5,
+	  "status": "A"
+    }
+  ]
