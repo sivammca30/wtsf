@@ -1,26 +1,11 @@
 import { useState } from 'react';
 import gallery from '../assets/json/gallery.json';
-// import Accordion from './Accordion';
-// import type { AccordionItem } from './Accordion'
 import { GALLERYMOMENTS } from "../data";
 import type { EventItem } from "../data";
 import Stack from './StackImage';
 import PhotoGallery from './PhotoGallery';
 
-// const faqData: AccordionItem[] = [
-//   {
-//     title: "YOGA DAY CELEBRATION - 2026",
-//     content: ""
-//   },
-//   {
-//     title: "WOMENS DAY CELEBRATION - SELF DEFENSE - TRAINING CAMP - 2026",
-//     content: ""
-//   },
-//   {
-//     title: "WOMENS DAY CELEBRATION - SELF DEFENSE - TRAINING CAMP - 2026",
-//     content: ""
-//   }
-// ];
+
 
 const images = [
   "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?q=80&w=500&auto=format",
@@ -34,23 +19,12 @@ const activeGallery = [...gallery]
   .filter(off => off.status === 'A' && off.sid === 1 && off.isVideo === 0)
   .sort((a, b) => a.order - b.order);
 
-
-// const activeVideoGallery = [...gallery]
-//     .filter(off => off.status === 'A' && off.sid === 1 && off.isVideo === 1)
-//     .sort((a, b) => a.order - b.order);
-
-// 1. Define Interfaces for type safety
 interface ImageItem {
   id: number;
   src: string;
   name: string;
 }
 
-// interface VideoItem {
-//   id: number;
-//   src: string;
-//   name: string;
-// }
 
 const GalleryImage: ImageItem[] = activeGallery
 //const GalleryVideo: VideoItem[] = activeVideoGallery
