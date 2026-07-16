@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "eventId": 1,
+    "photoUrl": "/images/eventphotos/national2025/1.jpg",  
+    "title": "Opening Ceremony",
+    "uploadedBy": "Admin"
+  },
+  {
+    "id": 4,
+    "eventId": 1,
+    "photoUrl": "/images/eventphotos/national2025/4.jpg",
+    "title": "Senior Category",
+    "uploadedBy": "Admin"
+  },
+  {
+    "id": 5,
+    "eventId": 1,
+    "photoUrl": "/images/eventphotos/national2025/5.jpg",
+    "title": "Final Match",
+    "uploadedBy": "Admin"
+  },
+  
+  {
+    "id": 6,
+    "eventId": 1,
+    "photoUrl": "/images/eventphotos/national2025/6.jpg",  
+    "title": "Opening Ceremony",
+    "uploadedBy": "Admin"
+  },
+  {
+    "id": 7,
+    "eventId": 1,
+    "photoUrl": "/images/eventphotos/national2025/2.jpg",
+    "title": "Senior Category",
+    "uploadedBy": "Admin"
+  },
+  {
+    "id": 8,
+    "eventId": 1,
+    "photoUrl": "/images/eventphotos/national2025/3.jpg",
+    "title": "Final Match",
+    "uploadedBy": "Admin"
+  },
+  {
+    "id": 9,
+    "eventId": 2,
+    "photoUrl": "/images/state2025/1.jpg",
+    "title": "March Past",
+    "uploadedBy": "Admin"
+  },
+  {
+    "id": 10,
+    "eventId": 2,
+    "photoUrl": "/images/state2025/2.jpg",
+    "title": "Prize Distribution",
+    "uploadedBy": "Admin"
+  },
+  {
+    "id": 11,
+    "eventId": 3,
+    "photoUrl": "/images/district2025/1.jpg",
+    "title": "Junior Category",
+    "uploadedBy": "Admin"
+  },
+  {
+    "id": 12,
+    "eventId": 3,
+    "photoUrl": "/images/district2025/2.jpg",
+    "title": "Girls Competition",
+    "uploadedBy": "Admin"
+  }
+]

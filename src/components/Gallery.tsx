@@ -2,6 +2,8 @@ import { useState } from "react";
 import type { FC } from "react";
 import { FaThLarge, FaList, FaImages } from "react-icons/fa"; // Importing clean UI layout icons
 import { CardView, ListView, CarouselView } from "./ImageView"; // Path to your view layouts
+import events from "../assets/json/eventlist.json";
+import photos from "../assets/json/eventphotolist.json";
 
 interface GalleryItem {
   image: string;
@@ -12,6 +14,8 @@ interface GalleryItem {
 const Gallery: FC = () => {
   const [viewMode, setViewMode] = useState<"card" | "list" | "carousel">("card");
 
+  const [selectedEvent, setSelectedEvent] = useState(events[0]);
+
   // Sample data array representing your federation images/content
   const sampleItems: GalleryItem[] = [
     { image: "https://picsum.photos/800/450?random=1", title: "Silambattam Event A", description: "Traditional weapon performance and grading session." },
@@ -19,10 +23,40 @@ const Gallery: FC = () => {
     { image: "https://picsum.photos/800/450?random=3", title: "Karuppu Kachi Awarding", description: "Honoring veteran masters and advanced students." }
   ];
 
-  return (
+  /*
+    <div>
+    {events.map(event => (
+
+      const coverPhoto = photos.find(
+        photo => photo.eventId === event.id
+    );
+return (
+<div
+    key={event.id}
+    className={selectedEvent.id===event.id?"active":""}
+    onClick={()=>setSelectedEvent(event)}
+>
+
+<img src={event.coverPhoto} />
+
+<div>
+
+<h4>{event.eventName}</h4>
+
+<p>{event.photoCount} Photos</p>
+
+<p>{event.location}</p>
+
+</div>
+
+</div>
+
+))}
+</div>
+*/
+
+    /*
     <div className="gallery-section">
-      
-      {/* ── View Controls Button Group ── */}
       <div className="view-switcher-container">
         <span className="switcher-label">View Mode:</span>
         <div className="button-group">
@@ -52,7 +86,7 @@ const Gallery: FC = () => {
         </div>
       </div>
 
-      {/* ── Dynamic Content Rendering ── */}
+      
       <div className="gallery-content-area">
         {viewMode === "card" && <CardView items={sampleItems} />}
         {viewMode === "list" && <ListView items={sampleItems} />}
@@ -60,7 +94,9 @@ const Gallery: FC = () => {
       </div>
 
     </div>
+    
   );
+  */
 };
 
 export default Gallery;

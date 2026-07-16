@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "eventName": "11th National Silambam Championship",
+    "location": "Chennai",
+    "eventDate": "2025-08-17",    
+    "photoCount": 150,
+    "description": "National level championship conducted by Indian Silambam Federation."
+  },
+  {
+    "id": 2,
+    "eventName": "Tamil Nadu State Championship",
+    "location": "Madurai",
+    "eventDate": "2025-06-20",    
+    "photoCount": 95,
+    "description": "State level Silambam competition."
+  },
+  {
+    "id": 3,
+    "eventName": "District Level Tournament",
+    "location": "Tenkasi",
+    "eventDate": "2025-04-15",    
+    "photoCount": 75,
+    "description": "District level junior and senior competitions."
+  },
+  {
+    "id": 4,
+    "eventName": "Women's Championship",
+    "location": "Coimbatore",
+    "eventDate": "2025-02-11",    
+    "photoCount": 60,
+    "description": "Women's State Silambam Championship."
+  },
+  {
+    "id": 5,
+    "eventName": "Summer Coaching Camp",
+    "location": "Salem",
+    "eventDate": "2025-05-05",    
+    "photoCount": 120,
+    "description": "Annual Summer Silambam Training Camp."
+  }
+]

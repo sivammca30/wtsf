@@ -28,10 +28,44 @@ const Home: FC = () => (
           Preserving and promoting the ancient Tamil martial art of Silambattam
           across India and the world.
         </p>
+        <div className="hero-actions">
         <Link to="/about" className="btn">About WTSF</Link>
         <Link to="/instructors" className="btn btn-ghost">Our Instructors</Link>
+        </div>
       </div>
     </section>
+
+    <section className="stats-strip">
+  <div className="stats-container">
+
+    <div className="stat-item">
+      <span className="stat-number">25+</span>
+      <span className="stat-label">Countries</span>
+    </div>
+
+    <div className="stat-divider"></div>
+
+    <div className="stat-item">
+      <span className="stat-number">150+</span>
+      <span className="stat-label">Instructors</span>
+    </div>
+
+    <div className="stat-divider"></div>
+
+    <div className="stat-item">
+      <span className="stat-number">10K+</span>
+      <span className="stat-label">Students</span>
+    </div>
+
+    <div className="stat-divider"></div>
+
+    <div className="stat-item">
+      <span className="stat-number">50+</span>
+      <span className="stat-label">Events</span>
+    </div>
+
+  </div>
+</section>
 
     <section className="section" id="about">
       <div className="container">

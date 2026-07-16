@@ -2,6 +2,7 @@ import type { FC, Dispatch, SetStateAction } from "react";
 import { NavLink as RouterNavLink } from "react-router-dom";
 import { NAV_LINKS } from "../data";
 import type { Theme, NavLink } from "../data";
+import wtsflogo from "../assets/images/logo.png";
 
 interface HeaderProps {
   menuOpen: boolean;
@@ -18,6 +19,7 @@ const Header: FC<HeaderProps> = ({ menuOpen, setMenuOpen, theme, toggleTheme }) 
     <header className="hdr">
       <div className="hdr-inner">
         <RouterNavLink to="/home" className="hdr-logo" onClick={() => setMenuOpen(false)}>
+        <img src={wtsflogo} alt="WTSF Logo" />
           {/* <img
             src="/assets/uploads/logo/22434.png"
             alt="WTSF Logo"
