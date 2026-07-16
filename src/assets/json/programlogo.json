@@ -1,0 +1,35 @@
+[
+{
+    "id": 1,
+    "alt": "PRESIDENCY",
+    "src": "images/programs/logo/1.png",
+    "href": "#",
+    "order": 1,
+    "status": "A"
+  },
+  {
+    "id": 2,
+    "alt": "VIVEKANANDA",
+    "src": "images/programs/logo/2.jpeg",
+    "href": "#",
+    "order": 2,
+    "status": "A"
+  },
+  {
+    "id": 3,
+    "alt": "SISHYA",
+    "src": "images/programs/logo/3.png",
+    "href": "#",
+    "order": 3,
+    "status": "A"
+  },
+  {
+    "id": 4,
+    "alt": "ARTS COLLEGE",
+    "src": "images/programs/logo/4.png",
+    "href": "#",
+    "order": 4,
+    "status": "A"
+  }
+
+]

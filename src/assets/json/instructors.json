@@ -348,7 +348,7 @@
     "position": "Instructor",
     "src": "images/instructors/India/TamilNadu/Madurai/7_balamurugan.png",
     "order": 7,
-    "status": "A"
+    "status": "I"
   },
   {
     "id": 28,
@@ -374,7 +374,7 @@
     "position": "Instructor",
     "src": "images/instructors/India/TamilNadu/Madurai/9_siva.png",
     "order": 9,
-    "status": "A"
+    "status": "I"
   },
   {
     "id": 30,
@@ -400,7 +400,7 @@
     "position": "Instructor",
     "src": "images/instructors/India/TamilNadu/Madurai/11_gokulakrishnan.png",
     "order": 11,
-    "status": "A"
+    "status": "I"
   },
   {
     "id": 32,
@@ -660,6 +660,19 @@
     "position": "Instructor",
     "src": "images/instructors/India/TamilNadu/Chennai/21_logeshwaran.jpeg",
     "order": 21,
+    "status": "A"
+  },
+  {
+    "id": 52,
+    "cid": 1,
+    "sid": 1,
+    "sname": "TamilNadu",
+    "did": 1,
+    "dname": "Chennai",
+    "name": "GOKULAKRISHNAN V",
+    "position": "Instructor",
+    "src": "images/instructors/India/TamilNadu/Chennai/22_gokulakrishnan.png",
+    "order": 22,
     "status": "A"
   }
 

@@ -9,6 +9,7 @@ import Instructors from './components/Instructors.tsx'
 import Contact from './components/Contact.tsx'
 import Gallery from './components/Gallery.tsx'
 import './index.css';
+import Program from './components/Program.tsx'
 // Import any other components you need (Instructors, Layout, etc.)
 
 const router = createBrowserRouter([
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: 'gallery', // Matches '/events'
         element: <Gallery />
+      },
+      {
+        path: 'program', // Matches '/events'
+        element: <Program />
       },
       {
         path: 'index.html',

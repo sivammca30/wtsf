@@ -1,5 +1,6 @@
 import type { FC, ChangeEvent, FormEvent } from "react";
 import { useState } from "react";
+import LeafletMapTS from "./LeafletMapTS";
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 interface FormField {
@@ -126,8 +127,11 @@ const Contact: FC = () => {
                 ))}
               </div>
 
-              {/* Embedded map placeholder */}
-              <div className="contact-map">
+              
+            </div>
+
+            {/* Embedded map placeholder */}
+              {/* <div className="contact-map">
                 <div className="contact-map-inner">
                   <span className="contact-map-pin">📍</span>
                   <p>Chennai, Tamil Nadu, India</p>
@@ -141,11 +145,11 @@ const Contact: FC = () => {
                     Open in Maps
                   </a>
                 </div>
-              </div>
-            </div>
+              </div> */}
+              <LeafletMapTS/>
 
             {/* ── Right: form ── */}
-            <div className="contact-form-wrap">
+            {/* <div className="contact-form-wrap">
               <h2 className="contact-info-title">Send a Message</h2>
 
               {status === "success" ? (
@@ -259,7 +263,7 @@ const Contact: FC = () => {
                   </div>
                 </form>
               )}
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
