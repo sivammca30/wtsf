@@ -10,7 +10,7 @@
   {
     "id": 2,
     "alt": "VIVEKANANDA",
-    "src": "images/programs/logo/2.jpeg",
+    "src": "images/programs/logo/2.png",
     "href": "#",
     "order": 2,
     "status": "A"
@@ -29,6 +29,14 @@
     "src": "images/programs/logo/4.png",
     "href": "#",
     "order": 4,
+    "status": "A"
+  },
+  {
+    "id": 5,
+    "alt": "STELLA MATRICULATION SCHOOL",
+    "src": "images/programs/logo/5.jpg",
+    "href": "#",
+    "order": 5,
     "status": "A"
   }
 

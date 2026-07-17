@@ -1,17 +1,6 @@
-import type { FC, ChangeEvent, FormEvent } from "react";
-import { useState } from "react";
+import type { FC } from "react";
 import LeafletMapTS from "./LeafletMapTS";
 
-// ── Types ─────────────────────────────────────────────────────────────────────
-interface FormField {
-  name: string;
-  email: string;
-  phone: string;
-  subject: string;
-  message: string;
-}
-
-type FormStatus = "idle" | "submitting" | "success" | "error";
 
 // ── Contact Info ──────────────────────────────────────────────────────────────
 interface ContactDetail {
@@ -36,57 +25,8 @@ const SOCIAL_LINKS: SocialLink[] = [
   { icon: "▶",  label: "YouTube",   href: "https://www.youtube.com/@worldtraditionalsilambatta4819" },
 ];
 
-const EMPTY_FORM: FormField = { name: "", email: "", phone: "", subject: "", message: "" };
-
 // ── Component ─────────────────────────────────────────────────────────────────
 const Contact: FC = () => {
-  const [form, setForm] = useState<FormField>(EMPTY_FORM);
-  const [errors, setErrors] = useState<Partial<FormField>>({});
-  const [status, setStatus] = useState<FormStatus>("idle");
-
-  // Validation
-  const validate = (): Partial<FormField> => {
-    const e: Partial<FormField> = {};
-    if (!form.name.trim())          e.name    = "Name is required.";
-    if (!form.email.trim())         e.email   = "Email is required.";
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
-                                    e.email   = "Enter a valid email address.";
-    if (!form.subject.trim())       e.subject = "Subject is required.";
-    if (!form.message.trim())       e.message = "Message is required.";
-    else if (form.message.trim().length < 20)
-                                    e.message = "Message must be at least 20 characters.";
-    return e;
-  };
-
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>): void => {
-    const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
-    if (errors[name as keyof FormField]) {
-      setErrors((prev) => ({ ...prev, [name]: undefined }));
-    }
-  };
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
-    e.preventDefault();
-    const validationErrors = validate();
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
-      return;
-    }
-    setStatus("submitting");
-    // Simulate API call — replace with real endpoint
-    await new Promise<void>((resolve) => setTimeout(resolve, 1500));
-    setStatus("success");
-    setForm(EMPTY_FORM);
-    setErrors({});
-  };
-
-  const handleReset = (): void => {
-    setForm(EMPTY_FORM);
-    setErrors({});
-    setStatus("idle");
-  };
-
   return (
     <>
       <section className="page-header">
@@ -130,140 +70,13 @@ const Contact: FC = () => {
               
             </div>
 
-            {/* Embedded map placeholder */}
-              {/* <div className="contact-map">
-                <div className="contact-map-inner">
-                  <span className="contact-map-pin">📍</span>
-                  <p>Chennai, Tamil Nadu, India</p>
-                  <a
-                    href="https://maps.google.com/?q=Chennai+Tamil+Nadu+India"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn"
-                    style={{ marginTop: "1rem", fontSize: "0.8rem", padding: "0.55rem 1.4rem" }}
-                  >
-                    Open in Maps
-                  </a>
-                </div>
-              </div> */}
-              <LeafletMapTS/>
+           
+              {/* Right Side */}
+  <div className="contact-map">
+    <LeafletMapTS />
+  </div>
 
-            {/* ── Right: form ── */}
-            {/* <div className="contact-form-wrap">
-              <h2 className="contact-info-title">Send a Message</h2>
-
-              {status === "success" ? (
-                <div className="contact-success">
-                  <div className="contact-success-icon">✓</div>
-                  <h3>Message Sent!</h3>
-                  <p>Thank you for reaching out. We'll get back to you within 1–2 business days.</p>
-                  <button className="btn" onClick={handleReset} style={{ marginTop: "1.5rem" }}>
-                    Send Another
-                  </button>
-                </div>
-              ) : (
-                <form className="contact-form" onSubmit={handleSubmit} noValidate>
-                  <div className="form-row">
-                    <div className="form-group">
-                      <label className="form-label" htmlFor="name">Full Name <span className="form-required">*</span></label>
-                      <input
-                        id="name"
-                        name="name"
-                        type="text"
-                        className={`form-input${errors.name ? " form-input-error" : ""}`}
-                        placeholder="Your full name"
-                        value={form.name}
-                        onChange={handleChange}
-                        autoComplete="name"
-                      />
-                      {errors.name && <span className="form-error">{errors.name}</span>}
-                    </div>
-
-                    <div className="form-group">
-                      <label className="form-label" htmlFor="email">Email Address <span className="form-required">*</span></label>
-                      <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        className={`form-input${errors.email ? " form-input-error" : ""}`}
-                        placeholder="you@example.com"
-                        value={form.email}
-                        onChange={handleChange}
-                        autoComplete="email"
-                      />
-                      {errors.email && <span className="form-error">{errors.email}</span>}
-                    </div>
-                  </div>
-
-                  <div className="form-row">
-                    <div className="form-group">
-                      <label className="form-label" htmlFor="phone">Phone Number</label>
-                      <input
-                        id="phone"
-                        name="phone"
-                        type="tel"
-                        className="form-input"
-                        placeholder="+91 XXXXX XXXXX"
-                        value={form.phone}
-                        onChange={handleChange}
-                        autoComplete="tel"
-                      />
-                    </div>
-
-                    <div className="form-group">
-                      <label className="form-label" htmlFor="subject">Subject <span className="form-required">*</span></label>
-                      <select
-                        id="subject"
-                        name="subject"
-                        className={`form-input form-select${errors.subject ? " form-input-error" : ""}`}
-                        value={form.subject}
-                        onChange={handleChange}
-                      >
-                        <option value="">Select a subject</option>
-                        <option value="Affiliation">Affiliation</option>
-                        <option value="Classes">Classes &amp; Training</option>
-                        <option value="Events">Events &amp; Tournaments</option>
-                        <option value="Media">Media &amp; Press</option>
-                        <option value="Other">Other</option>
-                      </select>
-                      {errors.subject && <span className="form-error">{errors.subject}</span>}
-                    </div>
-                  </div>
-
-                  <div className="form-group">
-                    <label className="form-label" htmlFor="message">Message <span className="form-required">*</span></label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={5}
-                      className={`form-input form-textarea${errors.message ? " form-input-error" : ""}`}
-                      placeholder="Write your message here..."
-                      value={form.message}
-                      onChange={handleChange}
-                    />
-                    <div className="form-char-count">{form.message.length} characters</div>
-                    {errors.message && <span className="form-error">{errors.message}</span>}
-                  </div>
-
-                  {status === "error" && (
-                    <div className="form-server-error">Something went wrong. Please try again.</div>
-                  )}
-
-                  <div className="form-actions">
-                    <button
-                      type="submit"
-                      className="btn"
-                      disabled={status === "submitting"}
-                    >
-                      {status === "submitting" ? "Sending…" : "Send Message"}
-                    </button>
-                    <button type="button" className="btn btn-ghost" onClick={handleReset}>
-                      Clear
-                    </button>
-                  </div>
-                </form>
-              )}
-            </div> */}
+           
           </div>
         </div>
       </section>

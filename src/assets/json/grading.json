@@ -1,0 +1,29 @@
+[
+    {
+      "id": 1,
+      "name": "KATCHAI - BEGINNER",
+      "img": "images/grading/1.png",
+      "subdesc": "Traditional way of wearing a cloth around waist named as Katchai",
+      "desc": "Katchai Grading System contains 3 levels. Karuppu Katchai, Karuppu Sivappu Katchai and Sivappu Katchai which includes single stick, double stick techniques.",
+	  "order": 1,
+	  "status": "A"
+    },
+    {
+      "id": 2,
+      "name": "KAAPPU - INTERMEDIATE",
+      "img": "images/grading/2.png",
+      "subdesc": "Traditional way of wearing a rope/band around hands named as Kaappu",
+      "desc": "Kappuu Grading System contains the intermeditate level techniques of silambam. Also includes weapon training like Surru Vaal and Vaal Kambu.",
+	  "order": 2,
+	  "status": "A"
+    },
+    {
+      "id": 3,
+      "name": "PARIVATTAM - ADVANCED",
+      "img": "images/grading/3.png",
+      "subdesc": "Traditional way of wearing a cloth around head named as Parivattam",
+      "desc": "Parivattam Grading System contains the advanced level techniques of silambam. Also includes weapon training like Vaal Veechu, Maan Kombu.",
+	  "order": 3,
+	  "status": "A"
+    }
+  ]

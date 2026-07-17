@@ -9,7 +9,7 @@ const Events: FC = () => (
       <div className="page-header-content">
         {/* <p className="tagline">Calendar</p> */}
         <h1>Upcoming Events</h1>
-        <p>Tournaments, camps, and workshops happening across the federation.</p>
+        <p>Tournaments, Training camps, Grading and Workshops happening across the federation.</p>
       </div>
     </section>
 
@@ -46,7 +46,7 @@ const Events: FC = () => (
 
      <section className="section section-dark">
       <div className="container">
-        <div className="section-title"><h2>WTSF MOMENTS</h2></div>
+        <div className="section-title"><h2>RECENT EVENTS</h2></div>
         <div className="blog-grid">
           {MOMENTS.map((ev: EventItem) => {
             const formatted: string = new Date(ev.date).toLocaleDateString("en-IN", {

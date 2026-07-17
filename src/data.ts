@@ -37,6 +37,7 @@ export interface Affiliate {
 export interface Program {
   id: number;
   alt: string;
+  section: string;
 }
 
 export interface Affiliate_Rule {
@@ -128,9 +129,9 @@ export const AFFILIATES: Affiliate[] = [
 ];
 
 export const PROGRAMS: Program[] = [
-  { id: 1, alt: "Silambam Competitions/Tournament Organizer" },
-  { id: 2, alt: "Silambam Training Camps" },
-  { id: 3, alt: "Silambam Workshops" }
+  { id: 1, alt: "WTSF Referee/Judges", section: "referee" },
+  { id: 2, alt: "WTSF Competitions", section: "competition" },
+  { id: 3, alt: "WTSF Grading", section: "grading" }
 ];
 
 export const GRADINGS: Grading[] = [

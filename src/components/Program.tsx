@@ -18,8 +18,9 @@ import sectionphoto from '../assets/json/sectionphoto.json'
 // import sectiononephoto from '../assets/json/sectionone.json';
 // import sectiontwophoto from '../assets/json/sectiontwo.json';
 // import sectionthreephoto from '../assets/json/sectionthree.json';
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
+import ImageStack from './ImageStack';
 
 import "yet-another-react-lightbox/styles.css";
 
@@ -30,38 +31,108 @@ import Counter from "yet-another-react-lightbox/plugins/counter";
 
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import "yet-another-react-lightbox/plugins/counter.css";
+import { GradingGallery } from "./Programs";
+
+export interface ImageItem {
+  id: number;
+  alt: string;
+  src: string;
+  sectionid: number;
+  order: number;
+  status: string;
+}
+
+export interface Program {
+  id: number;
+  alt: string;
+  section: string;
+  ref: HTMLDivElement
+}
+
+const sectionPhotos = [1, 2, 3].reduce<Record<string, string[]>>((acc, sectionId) => {
+    acc[`section_${sectionId}`] = [...sectionphoto]
+        .filter(off => off.status === 'A' && off.sectionid === sectionId)
+        .sort((a, b) => a.order - b.order)
+        .slice(0, 3)
+        .map(off => off.src); // <-- Extracts strings to match your string[] type
+
+    return acc;
+}, {});
+
+const combinedSectionPhotos: ImageItem[] = [...sectionphoto]
+  .filter(off => off.status === 'A' && [1, 2, 3].includes(off.sectionid))
+  .sort((a, b) => {
+    // First group by section ID
+    if (a.sectionid !== b.sectionid) {
+      return a.sectionid - b.sectionid;
+    }
+    // Then sort by order within that section
+    return a.order - b.order;
+  });
 
 const seconephoto = [...sectionphoto]
     .filter(off => off.status === 'A' && off.sectionid === 1)
     .sort((a, b) => a.order - b.order);
-    
+
 const sectwophoto = [...sectionphoto]
     .filter(off => off.status === 'A' && off.sectionid === 2)
     .sort((a, b) => a.order - b.order);
 
-    
+
 const secthreephoto = [...sectionphoto]
     .filter(off => off.status === 'A' && off.sectionid === 3)
     .sort((a, b) => a.order - b.order);
 
-    const secfourphoto = [...sectionphoto]
+const secfourphoto = [...sectionphoto]
     .filter(off => off.status === 'A' && off.sectionid === 4)
     .sort((a, b) => a.order - b.order);
 
 
+
+
+
+
 const Program: FC = () => {
 
- const [open1, setOpen1] = useState(false);
-  const [index1, setIndex1] = useState(0);
-  const [open2, setOpen2] = useState(false);
-  const [index2, setIndex2] = useState(0);
-  const [open3, setOpen3] = useState(false);
-  const [index3, setIndex3] = useState(0);
-  const [open4, setOpen4] = useState(false);
-  const [index4, setIndex4] = useState(0);
+    const refereeRef = useRef<HTMLDivElement>(null);
+const competitionRef = useRef<HTMLDivElement>(null);
+const gradingRef = useRef<HTMLDivElement>(null);
+
+
+const [activeSection, setActiveSection] = useState("referee");
+
+const handleCardClick = (
+  section: string,
+  ref: React.RefObject<HTMLDivElement | null>
+) => {
+  setActiveSection(section);
+console.log(ref);
+  setTimeout(() => {
+    ref.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }, 0);
+};
+
+
+const PROGRAMS = [
+  { id: 1, alt: "WTSF Referee/Judges", section: "referee", ref: refereeRef },
+  { id: 2, alt: "WTSF Competitions", section: "competition", ref: competitionRef  },
+  { id: 3, alt: "WTSF Grading", section: "grading", ref: gradingRef }
+];
+
+    const [open1, setOpen1] = useState(false);
+    const [index1, setIndex1] = useState(0);
+    const [open2, setOpen2] = useState(false);
+    const [index2, setIndex2] = useState(0);
+    const [open3, setOpen3] = useState(false);
+    const [index3, setIndex3] = useState(0);
+    const [open4, setOpen4] = useState(false);
+    const [index4, setIndex4] = useState(0);
     return (
         <>
-{/* <button
+            {/* <button
       type="button"
       onClick={() => window.history.back()}
       className="flex items-center justify-center p-2 rounded-full hover:bg-gray-100 transition-colors"
@@ -74,15 +145,45 @@ const Program: FC = () => {
                     <h1>WTSF Programs</h1>
                     <p>WTSF Conducting National/State/District level Silambam competitions, training camps and workshops
                         to promotes our traditional silambam art to the younger society and the overall growth of the art.</p>
-                        <p>Tournaments | Training Camps | Grading</p>
+                    <p>Competitions-Tournaments | Referee-Judge | Training Camps | Grading</p>
                 </div>
             </section>
 
+           
 
-            <section className="section-small section-dark">
+
+            <div className="grading-grid">
+                {PROGRAMS.map((ev, index) => {
+                     const sectionKey = `section_${index + 1}`;
+                     const currentSectionImages: string[] = sectionPhotos[sectionKey] || [];
+                     console.log(ev.ref);
+
+                    return (
+                        <div key={ev.id} 
+                         className={`blog-card ${activeSection === ev.section ? "active-card" : ""}`} 
+                        style={{ textDecoration: "none", color: "inherit", flex: 1 }}
+                        
+                         onClick={() => handleCardClick(ev.section, ev.ref)}>
+                            <div className="blog-card-placeholder">
+                                <ImageStack images={currentSectionImages} />
+                                
+                            </div>
+
+                            <div className="blog-card-body">
+                                <div className="grading-card-title">{ev.alt}</div>
+                            </div>
+
+                        </div>
+                    );
+                })}
+            </div>
+
+            
+
+            {activeSection === "referee" && (
+            <div ref={refereeRef} className="section section-dark">
                 <div className="container">
                     <div className="section-placeholder">
-                        <span>Contact US for</span>
                         <span>WTSF Referees Organizing Tournaments</span>
                         <p>
                         Our instructors have comprehensive knowledge and experience in refereeing and judging 
@@ -97,7 +198,6 @@ const Program: FC = () => {
                 </div>
                 <div className="container">
 
-                    {/* <SectionOnePhoto /> */}
                     <div className="gallery">
 
                         {seconephoto.map((slide, i) => (
@@ -132,9 +232,11 @@ const Program: FC = () => {
                     
 
                 </div>
-            </section>
+            </div>
+            )}
 
-             <section className="section-small section-dark">
+            {activeSection === "promotion" && (
+             <div  className="section section-dark">
                 <div className="container">
                     <div className="section-placeholder">
                         <span>WTSF Referee/Judge Promotion</span>
@@ -148,8 +250,7 @@ const Program: FC = () => {
                 </div>
                 <div className="container">
 
-                    {/* <SectionOnePhoto /> */}
-                     <div className="gallery">
+                    <div className="gallery">
 
                         {secfourphoto.map((slide, i) => (
 
@@ -182,9 +283,11 @@ const Program: FC = () => {
                     />
 
                 </div>
-            </section>
+            </div>
+            )}
 
-            <section className="section-small">
+            {activeSection === "competition" && (
+            <div ref={competitionRef} className="section section-dark">
                 <div className="container">
                     <div className="section-placeholder">
                         <span>WTSF Competitions</span>
@@ -200,8 +303,7 @@ const Program: FC = () => {
                 </div>
                 <div className="container">
 
-                    {/* <SectionOnePhoto /> */}
-                     <div className="gallery">
+                    <div className="gallery">
 
                         {sectwophoto.map((slide, i) => (
 
@@ -234,9 +336,11 @@ const Program: FC = () => {
                     />
 
                 </div>
-            </section>
+            </div>
+            )}
 
-            <section className="section-small section-dark">
+            {activeSection === "grading" && (
+            <div  ref={gradingRef}  className="section-small section-dark">
                 <div className="container">
                     <div className="section-placeholder">
                         <span>WTSF Grading</span>
@@ -250,8 +354,7 @@ const Program: FC = () => {
                 </div>
                 <div className="container">
 
-                    {/* <SectionThreePhoto /> */}
-                     <div className="gallery">
+                    <div className="gallery">
 
                         {secthreephoto.map((slide, i) => (
 
@@ -284,7 +387,8 @@ const Program: FC = () => {
                     />
                     
                 </div>
-            </section>
+            </div>
+            )}
 
 
         </>

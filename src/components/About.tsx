@@ -12,9 +12,15 @@ import useWindowWidth from './useWindowWidth';
 import StarBorder from "./StarBorder";
 import LogoLoop from './LogoLoop';
 import plogo from '../assets/json/programlogo.json';
+import grading from '../assets/json/grading.json'
 
 
 const activeLogo = [...plogo]
+    .filter(off => off.status === 'A')
+    .sort((a, b) => a.order - b.order);
+
+    
+const activeGrade = [...grading]
     .filter(off => off.status === 'A')
     .sort((a, b) => a.order - b.order);
 
@@ -139,6 +145,42 @@ const About: FC = () => {
 
     <section className="section">
       <div className="container">
+        <div className="section-title"><h2>WTSF GRADING SYSTEM</h2></div>
+
+      <div className="grading-grid">
+          {activeGrade.map((ev) => {
+            // const formatted: string = new Date(ev.date).toLocaleDateString("en-IN", {
+            //   year: "numeric",
+            //   month: "long",
+            //   day: "numeric",
+            // });
+            return (
+              <Link key={ev.id} to="/events" className="blog-card" style={{ textDecoration: "none", color: "inherit" }}>
+                <div className="blog-card-placeholder">
+                    <img className="blog-card-image"
+                      src={ev.img}
+                      alt={ev.name}
+                    />
+                </div>
+                <div className="blog-card-body">
+                  <div className="blog-card-date"></div>
+                  {/* <span className="blog-card-cat">{ev.category}</span>
+                  <p className="blog-card-desc">{ev.desc}</p> */}
+                  <div className="grading-card-title">{ev.name}</div>
+                  <p className="grading-card-sub-desc">{ev.subdesc}</p> 
+                  <p className="grading-card-desc">{ev.desc}</p> 
+                  
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+
+      </div>
+    </section>
+
+    <section className="section section-dark">
+      <div className="container">
         <div className="section-title"><h2>WTSF - Affiliates - States</h2></div>
 
 
@@ -173,7 +215,7 @@ const About: FC = () => {
       </div>
     </section>
 
-    <section className="section section-dark">
+    <section className="section">
       <div className="container">
         <div className="section-title"><h2>Join with WTSF</h2></div>
         <div className="affiliates">

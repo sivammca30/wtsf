@@ -10,7 +10,6 @@ import Contact from './components/Contact.tsx'
 import Gallery from './components/Gallery.tsx'
 import './index.css';
 import Program from './components/Program.tsx'
-// Import any other components you need (Instructors, Layout, etc.)
 
 const router = createBrowserRouter([
   {
