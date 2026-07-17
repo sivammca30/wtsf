@@ -10,6 +10,7 @@ import Contact from './components/Contact.tsx'
 import Gallery from './components/Gallery.tsx'
 import './index.css';
 import Program from './components/Program.tsx'
+import PhotoGallery from './components/GalleryAlbum.tsx'
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: 'gallery', // Matches '/events'
         element: <Gallery />
+      },
+      {
+        path: 'galleryalbum', // Matches '/photo-gallery'
+        element: <PhotoGallery />
       },
       {
         path: 'program', // Matches '/events'

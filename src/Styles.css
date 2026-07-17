@@ -3031,17 +3031,7 @@ main.sphere-main {
   box-shadow: 0 0 15px rgba(255, 193, 7, 0.4);
 }
 
-@media (max-width: 1100px) {
-    .grading-grid {
-        grid-template-columns: repeat(2, 350px);
-    }
-}
 
-@media (max-width: 768px) {
-    .grading-grid {
-        grid-template-columns: 350px;
-    }
-}
 
 /* Image Stacks */
 .image-stack-container {
@@ -3071,8 +3061,239 @@ main.sphere-main {
   object-fit: cover;
 }
 
+/* ===========================
+   Gallery Album
+=========================== */
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(3,350px);
+    justify-content: center;
+    gap: 35px;
+    padding: 50px;
+}
+
+/* ===========================
+   Album Card
+=========================== */
+
+.album-card {
+    width: 320px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+    transition: all .35s ease;
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+}
+
+.album-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .18);
+}
+
+/* ===========================
+   Album Image
+=========================== */
+
+.album-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.album-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s ease;
+}
+
+.album-card:hover img {
+    transform: scale(1.06);
+}
+
+/* ===========================
+   Album Content
+=========================== */
+
+.album-info {
+    padding: 22px;
+}
+
+.album-cat {
+  display: inline-block;
+  font-size: 0.7rem;
+  background: var(--accent-dim);
+  color: var(--accent);
+  padding: 0.15rem 0.55rem;
+  border-radius: 20px;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.album-info h3 {
+    margin: 0;
+    min-height: 30px;
+    color: #b8860b;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.45;
+    letter-spacing: .2px;
+}
+
+/* ===========================
+   Bottom Section
+=========================== */
+
+.album-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding-top: 16px;
+    border-top: 1px solid #eeeeee;
+    position: relative;
+}
+
+/* Gold Accent */
+
+.album-bottom::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+
+    width: 45px;
+    height: 2px;
+
+    background: #d4af37;
+}
+
+/* ===========================
+   Photo Count
+=========================== */
+
+.album-count {
+    font-size: 15px;
+    color: #666;
+    font-weight: 500;
+}
+
+/* ===========================
+   View Album
+=========================== */
+
+.album-link {
+    font-size: 15px;
+    color: #b8860b;
+    font-weight: 600;
+
+    transition: all .3s ease;
+}
+
+.album-card:hover .album-link {
+    color: #d4af37;
+    transform: translateX(5px);
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+/* @media (max-width: 992px) {
+
+    .album-card {
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+
+   
+
+    .album-card {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .album-image {
+        height: 220px;
+    }
+
+    .album-info h3 {
+        font-size: 17px;
+    }
+
+    
+
+    .yarl__button {
+    transition: .3s;
+} 
+
+.yarl__button:hover {
+    color: #d4af37 !important;
+}
+
+.yarl__thumbnails_thumbnail {
+    border-radius: 10px !important;
+    transition: .3s;
+}
+
+.yarl__thumbnails_thumbnail:hover {
+    transform: scale(1.08);
+}
+
+.yarl__thumbnails_thumbnail_active {
+    border: 2px solid #d4af37 !important;
+}
+
+.yarl__navigation_prev,
+.yarl__navigation_next {
+    background: rgba(255,255,255,.12);
+    border-radius: 50%;
+    padding: 12px;
+}
+
+.yarl__navigation_prev:hover,
+.yarl__navigation_next:hover {
+    background: rgba(212,175,55,.25);
+}
+
+.yarl__toolbar {
+    padding: 18px 25px;
+}
+
+.yarl__counter {
+    font-size: 20px !important;
+    font-weight: 600;
+}
+}
+*/
 
 /* Responsive Hide Text on Mobile screens if needed */
+
+@media (max-width: 1100px) {
+    .grading-grid {
+        grid-template-columns: repeat(2, 350px);
+    }
+    .album-grid {
+        grid-template-columns: repeat(2, 300px);
+    }
+}
+
+@media (max-width: 768px) {
+    .grading-grid {
+        grid-template-columns: 350px;
+    }
+
+    .album-grid {
+        grid-template-columns: 300px;
+    }
+}
+
+
 @media (max-width: 480px) {
   .btn-text {
     display: none;
