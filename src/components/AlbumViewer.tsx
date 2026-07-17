@@ -25,7 +25,7 @@ export default function AlbumViewer({
   open,
   close,
   slides,
-  title,
+  
 }: AlbumViewerProps) {
   return (
     <Lightbox

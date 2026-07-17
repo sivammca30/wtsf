@@ -31,7 +31,7 @@ import Counter from "yet-another-react-lightbox/plugins/counter";
 
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import "yet-another-react-lightbox/plugins/counter.css";
-import { GradingGallery } from "./Programs";
+//import { GradingGallery } from "./Programs";
 
 export interface ImageItem {
   id: number;
@@ -59,16 +59,6 @@ const sectionPhotos = [1, 2, 3].reduce<Record<string, string[]>>((acc, sectionId
     return acc;
 }, {});
 
-const combinedSectionPhotos: ImageItem[] = [...sectionphoto]
-  .filter(off => off.status === 'A' && [1, 2, 3].includes(off.sectionid))
-  .sort((a, b) => {
-    // First group by section ID
-    if (a.sectionid !== b.sectionid) {
-      return a.sectionid - b.sectionid;
-    }
-    // Then sort by order within that section
-    return a.order - b.order;
-  });
 
 const seconephoto = [...sectionphoto]
     .filter(off => off.status === 'A' && off.sectionid === 1)
