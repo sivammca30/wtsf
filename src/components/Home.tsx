@@ -2,8 +2,8 @@ import type { FC } from "react";
 import { Link } from "react-router-dom";
 import { EVENTS, ASSOICIATIONS } from "../data";
 import type { EventItem, Association } from "../data";
-import wtsflogo from "../assets/images/logo.png"
 import officials from '../assets/json/officials.json';
+import StatsSection from "./StatsSection";
 
 
 const activeOfficials = [...officials]
@@ -16,11 +16,11 @@ const Home: FC = () => (
       <div className="hero-content">
         <img
           className="hero-logo"
-          src={wtsflogo}
+          src= "images/logo/logo.png"
           alt="WTSF"
-          onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
-            e.currentTarget.style.display = "none";
-          }}
+          // onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
+          //   e.currentTarget.style.display = "none";
+          // }}
         />
         <p className="tagline">Learn · Secure · Teach</p>
         <h1>World Traditional<br />Silambattam Federation</h1>
@@ -59,6 +59,14 @@ const Home: FC = () => (
 
     <section className="section section-dark">
       <div className="container">
+        <div className="section-title"><h2>WTSF Growth in Numbers</h2></div>
+        <StatsSection/>
+        </div>
+
+    </section>
+
+    <section className="section">
+      <div className="container">
         <div className="section-title"><h2>Executive Members</h2></div>
         <div className="card-grid">
         {activeOfficials.map((off) => (
@@ -84,7 +92,7 @@ const Home: FC = () => (
       </div>
     </section>
 
-    <section className="section">
+    <section className="section  section-dark">
       <div className="container">
         <div className="section-title"><h2>In Association With</h2></div>
         <div className="affiliates">
@@ -95,7 +103,7 @@ const Home: FC = () => (
       </div>
     </section>
 
-    <section className="section section-dark">
+    <section className="section ">
       <div className="container">
         <div className="section-title"><h2>Upcoming Events</h2></div>
         <div className="blog-grid">

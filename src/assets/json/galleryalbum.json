@@ -303,7 +303,7 @@
   {
     "id": 5,
     "title": "Referee-Judge Promotion",
-    "cover": "images/gallery/section-5/11.jpg",
+    "cover": "images/gallery/section-5/1.jpg",
     "date": "21 June 2026",
     "category": "Events",
     "status": "A",
@@ -355,11 +355,19 @@
       },
       {
         "id": 12,
-        "src": "images/gallery/section-5/12.jpg"
+        "src": "images/gallery/section-5/12.JPG"
       },
       {
         "id": 13,
         "src": "images/gallery/section-5/13.jpg"
+      },
+      {
+        "id": 14,
+        "src": "images/gallery/section-5/14.JPG"
+      },
+      {
+        "id": 15,
+        "src": "images/gallery/section-5/15.JPG"
       }
 
     ],

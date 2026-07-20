@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import './Styles.css';
+import WhatsAppButton from './components/WhatsAppButton';
 
 type Theme = "dark" | "light";
 
@@ -43,7 +44,7 @@ const App = () => {
       <main>
         <Outlet />
       </main>
-      
+       <WhatsAppButton />
       <Footer />
     </div>
   );

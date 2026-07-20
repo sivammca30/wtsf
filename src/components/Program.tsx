@@ -135,7 +135,13 @@ const PROGRAMS = [
                     <h1>WTSF Programs</h1>
                     <p>WTSF Conducting National/State/District level Silambam competitions, training camps and workshops
                         to promotes our traditional silambam art to the younger society and the overall growth of the art.</p>
-                    <p>Competitions-Tournaments | Referee-Judge | Training Camps | Grading</p>
+                    {/* <p>Competitions-Tournaments | Referee-Judge | Training Camps | Grading</p> */}
+                    <div className="program-list">
+                        <div className="program-item">🏆 Competitions & Tournaments</div>
+                        <div className="program-item">⚖️ Referee & Judge</div>
+                        <div className="program-item">🥢 Training Camps</div>
+                        <div className="program-item">🎖️ Grading</div>
+                    </div>
                 </div>
             </section>
 
