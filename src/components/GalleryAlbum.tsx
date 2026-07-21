@@ -17,11 +17,15 @@ export default function GalleryAlbum() {
         .filter(off => off.status === 'A')
         .sort((a, b) => a.order - b.order);
 
+      
+
 
     return (
         <>
 
-<section className="section section-dark">
+<section className="section-small section-dark">
+    
+    <div className="section-title-small"><h2>PHOTO GALLERY</h2></div>
             <div className="album-grid">
                 {galbum.map((album) => (
                     <div
@@ -58,6 +62,8 @@ export default function GalleryAlbum() {
                 slides={slides}
                 title={title}
             />
+
+            
         </>
     );
 }
